@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Details</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      /* background-image: url(dest.jpg); */
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo img {
+      width: 150px;
+      height: auto;
+    }
+
+    .buttons button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .buttons button:hover {
+      background-color: #45a049;
+    }
+
+    .bill {
+      margin: 20px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .bill h2 {
+      color: #333;
+    }
+
+    .bill p {
+      color: #777;
+      font-size: 18px;
+    }
+
+    .payment-options {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .payment-option {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .payment-option label {
+      margin-left: 10px;
+      color: #333;
+      font-size: 18px;
+    }
+
+    .payment-option img {
+      width: 50px;
+      height: auto;
+    }
+
+    .buttons-container {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .buttons-container button {
+      background-color: #15414f;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .buttons-container button:hover {
+      background-color: #007b9e;
+    }
+
+   
+   
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      /* background-image: url(dest.jpg); */
+      background-size: cover;
+      background-position: center;
+      color: #333;
+    }
+
+    footer {
+            /* background-color: #2d2d2d; */
+            text-align: center;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer .social-media a {
+            padding: 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+            /* Smooth color transition */
+            text-decoration: none;
+            /* Remove the underline */
+        }
+
+        footer .social-media a:hover {
+            color: #ffcc00;
+            /* Change color on hover */
+        }
+
+        
+    /* Initially, all elements with class 'animate' are hidden */
+.animate {
+    opacity: 0;
+    transform: translateY(20px); /* Optionally shift them down */
+    transition: opacity 1s ease, transform 1s ease; /* Smooth fade-in and move */
+}
+
+/* When the element comes into view, we will add the 'show' class */
+.animate.show {
+    opacity: 1;
+    transform: translateY(0); /* Elements will return to their original position */
+}
+
+
+
+
+.logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .logo img {
+            width: 70px;
+            border-radius: 20%;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0 auto;
+            animation: fadeIn 2s;
+        }
+
+        header a {
+            justify-content: flex-end;
+        }
+
+
+        
+/* Buttons */
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-buttons .btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.header-buttons .btn:hover {
+    background-color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+
+    .header-buttons {
+        gap: 5px;
+    }
+
+    .header-buttons .btn {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .header-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 5px;
+    }
+}
+
+  </style>
+</head>
+
+<body style="background-color: #687f7f;">
+  <header class="sticky-top" style="height: 80px;">
+    <a href="index.html" data-bs-toggle="modal" data-bs-target="#thankYouModal" class="navbar-brand">
+      <img src="logo.jpeg" style="width: 70px; border-radius: 20%;">
+    </a>
+    <h1 class="text-white text-center" style="font-family: 'Times New Roman', Times, serif;">
+      Booking details for <span id="hotel-name" class="blink" style="color: rgb(213, 192, 192);"></span>
+    </h1>
+    <div class="header-buttons">
+      <a href="index.html" class="btn btn-home">Home</a>
+      <a href="info_page.html" class="btn btn-back">Back</a>
+  </div>
+  </header>
+  <!-- Thank You Modal -->
+  <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="background-color: #9e7e66;">
+        <div class="modal-header">
+          <h3 class="modal-title" id="thankYouModalLabel">Thank You for Visiting Our Website</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          Would you like to go to the home page?
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <a href="index.html" class="btn btn-success">Yes</a>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="text-left text-dark fade-in" style="font-family: 'Times New Roman', Times, serif;">Confirm Your Booking
+  </h2>
+  <div id="bookingDetailsContainer" class="p-4 border rounded shadow animate"
+    style="backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.2); border-radius: 10px;">
+    <p><strong class="text-dark" style="font-size: 18px;">Full Name:</strong> <span class="text-dark"
+        id="displayFullName"></span></p>
+    <p><strong class="text-dark" style="font-size:18px;">Email:</strong> <span class="text-dark"
+        id="displayEmail"></span></p>
+    <p><strong class="text-dark" style="font-size: 18px;">Contact:</strong> <span class="text-dark"
+        id="displayContact"></span></p>
+    <p><strong class="text-dark" style="font-size: 18px;">Check-in Date:</strong> <span class="text-dark"
+        id="displayCheckIn"></span></p>
+    <p><strong class="text-dark" style="font-size: 18px;">Check-out Date:</strong> <span class="text-dark"
+        id="displayCheckOut"></span></p>
+    <p><strong class="text-dark" style="font-size: 18px;">Number of Rooms:</strong> <span class="text-dark"
+        id="displayRooms"></span></p>
+    <p><strong class="text-dark" style="font-size: 18px;">Room Preference:</strong> <span class="text-dark"
+        id="displayPreference"></span></p>
+        <!-- <p><strong class="text-dark" style="font-size: 18px;">Total Price:</strong> 
+          <span class="text-dark" id="displayTotalPrice"></span>
+        </p> -->
+        
+  </div>
+
+  <div class="payment-options animate"
+    style="backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.2); border-radius: 10px;">
+    <h2 class="text-dark" style="font-family: 'Times New Roman', Times, serif;">Choose Payment Method</h2>
+    <div class="payment-option">
+      <input type="radio" id="credit-card" name="payment-method" value="Credit Card" required>
+      <label for="credit-card" class="text-dark">
+        <img src="gpay.png" alt="Credit Card">
+        Google Pay
+      </label>
+    </div>
+    <div class="payment-option">
+      <input type="radio" id="paypal" name="payment-method" value="PayPal" required>
+      <label for="paypal" class="text-dark">
+        <img src="paypal.png" alt="PayPal">
+        PayPal
+      </label>
+    </div>
+    <div class="payment-option">
+      <input type="radio" id="net-banking" name="payment-method" value="Net Banking" required>
+      <label for="net-banking" class="text-dark">
+        <img src="mastercard.png" alt="Net Banking">
+        Mastercard
+      </label>
+    </div>
+  </div>
+  <div id="countdown" class="text-center text-dark mt-4"
+    style="backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.2);"></div>
+
+  <div class="buttons-container animate">
+    <button onclick="confirmPayment()">Proceed to Pay</button>
+  </div>
+
+
+<br>
+  <!-- Footer Section -->
+  <footer class="text-center text-dark py-4 ">
+    <div class="container">
+        <p>© 2025 Your Travel Platform | All Rights Reserved</p>
+        <div class="social-media">
+            <!-- Updated href links to point to real social media pages -->
+            <a href="https://www.facebook.com" target="_blank" class="text-dark me-3">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="text-dark me-3">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="text-dark me-3">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" class="text-dark me-3">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.snapchat.com" target="_blank" class="text-dark">
+                <i class="fab fa-snapchat-ghost"></i> <!-- Add Snapchat icon -->
+            </a>
+        </div>
+    </div>
+</footer>
+  <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+        function revealOnScroll() {
+            const elements = document.querySelectorAll(".animate");
+            elements.forEach((el) => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    el.classList.add("show");
+                }
+            });
+        }
+        window.addEventListener("scroll", revealOnScroll);
+        revealOnScroll(); // Trigger on load
+    });
+
+   document.addEventListener("DOMContentLoaded", function () {
+    let bookingDetails = JSON.parse(localStorage.getItem("bookingDetails"));
+
+    if (bookingDetails) {
+        document.getElementById("displayFullName").textContent = bookingDetails.fullName;
+        document.getElementById("displayEmail").textContent = bookingDetails.email;
+        document.getElementById("displayContact").textContent = bookingDetails.contactNumber;
+        document.getElementById("displayCheckIn").textContent = bookingDetails.checkInDate;
+        document.getElementById("displayCheckOut").textContent = bookingDetails.checkOutDate;
+        document.getElementById("displayRooms").textContent = bookingDetails.numberOfRooms;
+        document.getElementById("displayPreference").textContent = bookingDetails.roomPreference;
+        // document.getElementById("displayTotalPrice").textContent = `₹${bookingDetails.totalPrice}`;
+
+        // document.getElementById("displayTotalPrice").textContent = `₹${bookingDetails.totalPrice}`; // Display total price
+    } else {
+        document.getElementById("bookingDetailsContainer").innerHTML = "<p>No booking details found.</p>";
+    }
+});
+
+    function confirmPayment() {
+      // Redirect to the paymentfinal.html page
+      window.location.href = "paymentfinal.html";
+    }
+
+
+
+    function countdownTimer() {
+            let countdownDate = new Date("March 15, 2025 23:59:59").getTime();
+
+            let x = setInterval(function () {
+                let now = new Date().getTime();
+                let distance = countdownDate - now;
+
+                let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown").innerHTML =
+                    `<h3>Hurry! Special Offer Ends In: ${days}d ${hours}h ${minutes}m ${seconds}s</h3>`;
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<h3>Offer Expired!</h3>";
+                }
+            }, 1000);
+        }
+
+        countdownTimer();
+
+        function confirmPayment() {
+    let selectedPayment = document.querySelector('input[name="payment-method"]:checked');
+
+    if (!selectedPayment) {
+        alert("Please select a payment method before proceeding.");
+        return;
+    }
+
+    let paymentMethod = selectedPayment.value;
+
+    // Save payment method in localStorage (optional)
+    let bookingDetails = JSON.parse(localStorage.getItem("bookingDetails")) || {};
+    bookingDetails.paymentMethod = paymentMethod;
+    localStorage.setItem("bookingDetails", JSON.stringify(bookingDetails));
+
+    // Redirect to confirmation page or payment gateway
+    window.location.href = "paymentfinal.html";
+}
+document.getElementById('hotel-name').textContent = sessionStorage.getItem('hotelName');
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

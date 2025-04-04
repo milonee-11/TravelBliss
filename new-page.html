@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Travel Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="new-page.css">
+  
+</head>
+
+<body style="background-color: #687f7f;">
+
+    <div class="carousel" id="carousel" style="background-image: url('beach.jpg'); ">
+        <div class="carousel-wrapper">
+            <div class="carousel-item" style="background-image: url('np1.jpg');"
+                onclick="changeBackground('np1.jpg');"></div>
+            <div class="carousel-item" style="background-image: url('np2.jpg');"
+                onclick="changeBackground('np2.jpg');"></div>
+            <div class="carousel-item" style="background-image: url('np6.jpg');" onclick="changeBackground('np6.jpg');">
+            </div>
+            <div class="carousel-item" style="background-image: url('np10.jpg');"
+                onclick="changeBackground('np10.jpg');"></div>
+            <div class="carousel-item" style="background-image: url('np3.jpg');"
+                onclick="changeBackground('np3.jpg');"></div>
+            <div class="carousel-item" style="background-image: url('np11.jpg');"
+                onclick="changeBackground('np11.jpg');"></div>
+            <div class="carousel-item" style="background-image: url('np7.jpg');"
+                onclick="changeBackground('np7.jpg');"></div>
+            <div class="carousel-item" style="background-image: url('np4.jpg');" onclick="changeBackground('np4.jpg');">
+            </div>
+            <div class="carousel-item" style="background-image: url('np5.jpg');" onclick="changeBackground('np5.jpg');">
+            </div>
+            <div class="carousel-item" style="background-image: url('np8.jpg');" onclick="changeBackground('np8.jpg');">
+            </div>
+            <div class="carousel-item" style="background-image: url('np9.jpg');" onclick="changeBackground('np9.jpg');">
+            </div>
+            <div class="carousel-item" style="background-image: url('np12.jpg');" onclick="changeBackground('np12.jpg');">
+            </div>
+            <div class="carousel-item" style="background-image: url('np13.jpg');" onclick="changeBackground('np13.jpg');">
+            </div>
+            <div class="carousel-item" style="background-image: url('np1.jpg');"
+            onclick="changeBackground('np1.jpg');"></div>
+        <div class="carousel-item" style="background-image: url('np2.jpg');"
+            onclick="changeBackground('np2.jpg');"></div>
+        <div class="carousel-item" style="background-image: url('np6.jpg');" onclick="changeBackground('np6.jpg');">
+        </div>
+        <div class="carousel-item" style="background-image: url('np10.jpg');"
+            onclick="changeBackground('np10.jpg');"></div>
+        <div class="carousel-item" style="background-image: url('np3.jpg');"
+            onclick="changeBackground('np3.jpg');"></div>
+        <div class="carousel-item" style="background-image: url('np11.jpg');"
+            onclick="changeBackground('np11.jpg');"></div>
+        <div class="carousel-item" style="background-image: url('np7.jpg');"
+            onclick="changeBackground('np7.jpg');"></div>
+        <div class="carousel-item" style="background-image: url('np4.jpg');" onclick="changeBackground('np4.jpg');">
+        </div>
+        <div class="carousel-item" style="background-image: url('np5.jpg');" onclick="changeBackground('np5.jpg');">
+        </div>
+        <div class="carousel-item" style="background-image: url('np8.jpg');" onclick="changeBackground('np8.jpg');">
+        </div>
+        <div class="carousel-item" style="background-image: url('np9.jpg');" onclick="changeBackground('np9.jpg');">
+        </div>
+        <div class="carousel-item" style="background-image: url('np12.jpg');" onclick="changeBackground('np12.jpg');">
+        </div>
+        <div class="carousel-item" style="background-image: url('np13.jpg');" onclick="changeBackground('np13.jpg');">
+        </div>
+        
+            <div class="carousel-item" style="background-image: url('np1.jpg');"
+            onclick="changeBackground('np1.jpg');"></div>
+        <div class="carousel-item" style="background-image: url('np2.jpg');"
+            onclick="changeBackground('np2.jpg');"></div>
+        <div class="carousel-item" style="background-image: url('np6.jpg');" onclick="changeBackground('np6.jpg');">
+        </div>
+        <div class="carousel-item" style="background-image: url('np10.jpg');"
+            onclick="changeBackground('np10.jpg');"></div>
+        <div class="carousel-item" style="background-image: url('np3.jpg');"
+            onclick="changeBackground('np3.jpg');"></div>
+        <div class="carousel-item" style="background-image: url('np11.jpg');"
+            onclick="changeBackground('np11.jpg');"></div>
+        <div class="carousel-item" style="background-image: url('np7.jpg');"
+            onclick="changeBackground('np7.jpg');"></div>
+        <div class="carousel-item" style="background-image: url('np4.jpg');" onclick="changeBackground('np4.jpg');">
+        </div>
+        <div class="carousel-item" style="background-image: url('np5.jpg');" onclick="changeBackground('np5.jpg');">
+        </div>
+        <div class="carousel-item" style="background-image: url('np8.jpg');" onclick="changeBackground('np8.jpg');">
+        </div>
+        <div class="carousel-item" style="background-image: url('np9.jpg');" onclick="changeBackground('np9.jpg');">
+        </div>
+        <div class="carousel-item" style="background-image: url('np12.jpg');" onclick="changeBackground('np12.jpg');">
+        </div>
+        <div class="carousel-item" style="background-image: url('np13.jpg');" onclick="changeBackground('np13.jpg');">
+        </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Header with Sticky Position -->
+    <header style="position: sticky; top: 0; background-color: #333; padding: 10px; z-index: 2000;">
+        <a href="index.html" class="navbar-brand logo" id="logo" >
+            <img src="logo.jpeg" style="width: 70px; ">
+        </a>
+
+        <h1 style="font-family: 'Times New Roman', Times, serif; text-align: center; color: #e4c3a9; margin-left: 450px;">
+            <span id="welcome-text" class="blink">Welcome</span> 
+            <!-- <span id="user-name" style="color: #feb47b;" class="blink"></span>! -->
+        </h1>
+ 
+        <div class="header-buttons">
+            <a href="index.html" class="btn btn-home">Home</a>
+            <a href="about.html" class="btn btn-back">About Us</a>
+            <a href="blog.html" class="btn btn-back">Blog</a>
+            <a href="index.html" class="btn btn-back">Back</a>
+        </div>
+    </header>
+
+ 
+
+    <!-- Bootstrap JavaScript Bundle (Includes Popper.js) -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <div class="main-container container " style="margin-top: 80px;">
+        <!-- Left Section -->
+        <div class="left-section ">
+            <div class="destination-card" style="width: 350px;" onclick="selectDestination('Manali')">
+                <img src="manali.jpg" alt="Manali">
+                <p style="color: #1e1b19;">Manali</p>
+            </div>
+            <div class="destination-card" style="width: 350px;" onclick="selectDestination('Udaipur')">
+                <img src="udaipur.jpg" alt="Udaipur">
+                <p style="color: #1e1b19;">Udaipur</p>
+            </div>
+            <div class="destination-card" style="width: 350px;" onclick="selectDestination('Goa')">
+                <img src="goa.jpg" alt="Statue of Unity">
+                <p style="color: #1e1b19;">Goa</p>
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <!-- Step 1: Choose Place -->
+            <div class="step active " style="background-color: #6c817d;" id="step1">
+                <h2 class=" text-white " style="font-family: Popins;">
+                    Select a Place:</h2>
+                <div id="selected-place"></div>
+            </div>
+
+            <!-- Step 2: Continue Button -->
+            <div class="step" style="background-color:  #6c817d;" id="step2">
+                <h2 class=" text-white " style="font-family: Popins;">You selected:
+                </h2>
+                <p class="text-white" id="place-name"></p>
+                <button onclick="showStep3()">Continue</button>
+            </div>
+
+            <!-- Step 3: Explore Options -->
+            <div class="step" style="background-color:  #6c817d;" id="step3">
+                <h2 class=" text-white " style="font-family: Popins;">Explore Options:
+                </h2>
+                <button onclick="selectOption('Hotels')">Hotels</button>
+                <button onclick="selectOption('Videos')">Videos</button>
+                <!-- <button onclick="selectOption('Photos')">Photos</button> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="text-center text-dark bg-dark py-4">
+        <div class="container">
+            <p style="color: #1e1b19;">© 2025 Your Travel Platform | All Rights Reserved</p>
+            <div class="social-media">
+                <!-- Updated href links to point to real social media pages -->
+                <a href="https://www.facebook.com" target="_blank" class="text-white me-3">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="text-white me-3">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="text-white me-3">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" class="text-white me-3">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.snapchat.com" target="_blank" class="text-white">
+                    <i class="fab fa-snapchat-ghost"></i> <!-- Add Snapchat icon -->
+                </a>
+            </div>
+        </div>
+    </footer>
+   
+     <!-- Back to Top Button -->
+     <div id="backToTop" title="Back to Top"></div>
+  
+
+
+    <script>
+
+        // Get the button
+        const backToTop = document.getElementById('backToTop');
+
+        // Show or hide the button based on scroll position
+        window.onscroll = function () {
+            if (document.documentElement.scrollTop > 100) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        };
+
+        // Smooth scroll to the top when clicked
+        backToTop.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+            });
+        });
+
+
+        // Display username from sessionStorage
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     var username = sessionStorage.getItem('username');
+        //     if (username) {
+        //         document.getElementById('user-name').innerText = username;
+        //     }
+        // });
+
+
+        function selectDestination(destination) {
+            document.getElementById('selected-place').textContent = destination;
+            document.getElementById('step1').classList.remove('active');
+            document.getElementById('step2').classList.add('active');
+            document.getElementById('place-name').textContent = destination;
+        }
+
+        function showStep3() {
+            document.getElementById('step2').classList.remove('active');
+            document.getElementById('step3').classList.add('active');
+        }
+
+        function selectOption(option) {
+    const selectedPlace = document.getElementById('place-name').textContent;
+    sessionStorage.setItem('selectedPlace', selectedPlace); // Store selected place
+
+    if (option === 'Hotels') {
+        if (selectedPlace === 'Udaipur') {
+            window.location.href = 'hotels.html';
+        } else if (selectedPlace === 'Manali') {
+            window.location.href = 'hotels2.html';
+        } else if (selectedPlace === 'Goa') {
+            window.location.href = 'hotels3.html';
+        }
+    } else if (option === 'Videos') {
+        window.location.href = `videos.html?search=${selectedPlace}`; // Pass place in URL
+    }
+}
+
+
+
+        const carouselWrapper = document.querySelector('.carousel-wrapper');
+        const items = document.querySelectorAll('.carousel-item');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+
+        let currentIndex = 0;
+        const numItems = items.length;
+
+        // Function to update the carousel items' states (active, next, prev)
+        function updateCarousel() {
+            items.forEach((item, index) => {
+                item.classList.remove('active', 'prev', 'next');
+                if (index === currentIndex) {
+                    item.classList.add('active');
+                } else if (index === (currentIndex - 1 + numItems) % numItems) {
+                    item.classList.add('prev');
+                } else if (index === (currentIndex + 1) % numItems) {
+                    item.classList.add('next');
+                }
+            });
+
+            // Move the carousel items linearly by adjusting the wrapper's transform
+            const offset = -currentIndex * 22; // Adjust for the spacing between items
+            // carouselWrapper.style.transform = translateX(${offset}%);
+        }
+        // Mouse move event for controlling the carousel position
+        let startX = 0;
+        let scrollLeft = 0;
+        let isMouseDown = false;
+
+        carouselWrapper.addEventListener('mousedown', (e) => {
+            isMouseDown = true;
+            startX = e.pageX - carouselWrapper.offsetLeft;
+            scrollLeft = carouselWrapper.scrollLeft;
+        });
+
+        carouselWrapper.addEventListener('mouseleave', () => {
+            isMouseDown = false;
+        });
+
+        carouselWrapper.addEventListener('mouseup', () => {
+            isMouseDown = false;
+        });
+
+        carouselWrapper.addEventListener('mousemove', (e) => {
+            if (!isMouseDown) return;
+            const x = e.pageX - carouselWrapper.offsetLeft;
+            const walk = (x - startX) * 3; // Scroll faster
+            carouselWrapper.scrollLeft = scrollLeft - walk;
+
+            // Dynamically adjust the active and adjacent items based on mouse movement
+            const middleIndex = Math.round((carouselWrapper.scrollLeft / (carouselWrapper.scrollWidth / numItems)) % numItems);
+            if (middleIndex !== currentIndex) {
+                currentIndex = middleIndex;
+                updateCarousel();
+            }
+        });
+        // Next and Previous button functionality
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + numItems) % numItems;
+            updateCarousel();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % numItems;
+            updateCarousel();
+        });
+
+        // Initialize the carousel
+        updateCarousel();
+
+
+        // JavaScript to trigger the modal after clicking the logo
+        document.getElementById('logo').addEventListener('click', function () {
+            // Manually trigger the modal to show when the logo is clicked
+            var myModal = new bootstrap.Modal(document.getElementById('thankYouModal'));
+            myModal.show();
+        });
+
+
+
+
+        function changeBackground(imageUrl) {
+            const carousel = document.getElementById("carousel");
+            carousel.style.backgroundImage = `url('${imageUrl}')`; // Update the background image
+        }
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Travel Bliss</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS (including Popper for tooltips and popovers) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+
+</head>
+
+<body style="background-color: #687f7f;">
+
+    <!-- <button class="btn btn-info navbar-brand" data-bs-toggle="modal" data-bs-target="#c1"><img src="logo.jpg" style="width: 70px; border-radius: 9px;"></button> -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#welcomeModal" class="navbar-brand">
+            <img src="logo.jpeg" style="width: 70px; border-radius: 20%; margin-left: 5px;">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html" data-bs-target="#contact">
+                        About Us
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#footer" data-bs-target="#contact">
+                        Contact
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#auth-section" data-bs-target="#contact">
+                        Login
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery" data-bs-target="#gallery">
+                        Gallery
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">
+                        Blog
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <!-- Welcome Modal -->
+    <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true"
+        data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content"
+                style="background-color: #51462c; color: #ffffff; border-radius: 5px; border: none; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); overflow: hidden;">
+                <!-- Header Section -->
+                <div class="modal-header"
+                    style="background: linear-gradient(to right, #675736, #423820); text-align: center; justify-content: center; padding: 15px; border-bottom: none;">
+                    <h3 class="modal-title" id="welcomeModalLabel"
+                        style="font-family: 'Times New Roman', Times, serif; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin: 0;">
+                        🌐 Welcome to Travel Bliss
+                    </h3>
+                </div>
+                <!-- Image with Content Overlay -->
+                <div style="position: relative; text-align: center; height: 140px; overflow: hidden;">
+                    <img src="desert.jpg" alt="Travel Image" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.6); color: #ffffff; padding: 5px 15px; border-radius: 10px; font-size: 14px;">
+                        Explore the world's most breathtaking destinations.
+                    </div>
+                </div>
+                <!-- Body Section -->
+                <div class="modal-body"
+                    style="font-family: 'Times New Roman', Times, serif; text-align: justify; padding: 15px;">
+                    <p style="margin-bottom: 8px; font-size: 14px;">
+                        ✈️ <strong>Plan Your Journey:</strong> Discover stunning locations, top-rated attractions, and
+                        tailored recommendations.
+                    </p>
+                    <p style="margin-bottom: 8px; font-size: 14px;">
+                        📹 <strong>Exclusive Content:</strong> Access travel videos and reviews from explorers
+                        worldwide.
+                    </p>
+                    <p style="margin-bottom: 8px; font-size: 14px;">
+                        🧳 <strong>Start Exploring Today:</strong> Let us make your journey unforgettable.
+                    </p>
+                    <p style="font-style: italic; text-align: center; margin-top: 10px; font-size: 13px;">
+                        🌟 Your next great adventure starts here.
+                    </p>
+                </div>
+                <!-- Footer Section -->
+                <div class="modal-footer"
+                    style="background: linear-gradient(to right, #675736, #423820); justify-content: center; border-top: none; padding: 10px;">
+                    <button type="button" class="btn btn-primary"
+                        style="background-color: #ffffff; color: #524024; border: none; padding: 8px 20px; border-radius: 25px; font-weight: bold;"
+                        data-bs-dismiss="modal">Explore Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Header Section -->
+    <header class="hero">
+        <div class="carousel-container">
+            <div class="carousel-slide fade">
+                <img src="h3.jpg" alt="Scenic View">
+            </div>
+            <div class="carousel-slide fade">
+                <img src="home2.jpg" alt="Mountains">
+            </div>
+            <div class="carousel-slide fade">
+                <img src="home.jpg" alt="Beach">
+            </div>
+        </div>
+
+        <!-- Overlapping Text Content -->
+        <div class="hero-content text-center">
+            <h1 class="animated-welcome">Welcome To Travel Bliss</h1>
+            <p class="animated-text">Your journey to unforgettable adventures starts here.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container-fluid mt-5 animate">
+
+
+
+        <!-- Features Section -->
+        <div class="row mt-4 animate">
+            <div class="col-lg-6">
+                <img src="t2.jpeg" style="height: 550px;" alt="Adventure" class="img-fluid mt-2">
+            </div>
+            <div class="col-lg-6 p-5 ">
+                <div class="mb-4 animate">
+                    <h6 class="text-dark fw-semibold">Why choose us</h6>
+                    <h3 class=" bg-dark text-white lead">Great opportunity for adventure and travel!</h3>
+                </div>
+
+                <div style="display: flex; align-items: center; margin-bottom: 20px; background: rgba(0, 0, 0, 0.5); padding: 15px; border-radius: 10px; color: white; animation: stripedBG 2s linear infinite, glowingBorder 2s infinite alternate; transition: transform 0.3s ease; box-shadow: 0 0 5px rgba(0, 255, 150, 0.3);"
+                    onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"
+                    class="animate">
+
+                    <div style="font-size: 2em;">
+                        <i class="fas fa-vest"></i>
+                    </div>
+                    <div style="margin-left: 15px;">
+                        <h5 style="font-weight: bold;">Safety First Always</h5>
+                        <p style="color: lightgray;">Travel with confidence—your safety is our top priority at every step.</p>
+                        
+                    </div>
+                </div>
+
+
+                <div style="display: flex; align-items: center; margin-bottom: 20px; background: rgba(0, 0, 0, 0.5); padding: 15px; border-radius: 10px; color: white; animation: stripedBG 2s linear infinite, glowingBorder 2s infinite alternate; transition: transform 0.3s ease; box-shadow: 0 0 5px rgba(0, 255, 150, 0.3);"
+                    onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"
+                    class="animate">
+
+                    <div style="font-size: 2em;">
+                        <i class="fas fa-vest"></i>
+                    </div>
+                    <div style="margin-left: 15px;">
+                        <h5 style="font-weight: bold;">Low Price and Friendly</h5>
+<p style="color: lightgray;">Enjoy budget-friendly travel with a welcoming experience wherever you go.</p>
+
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center; margin-bottom: 20px; background: rgba(0, 0, 0, 0.5); padding: 15px; border-radius: 10px; color: white; animation: stripedBG 2s linear infinite, glowingBorder 2s infinite alternate; transition: transform 0.3s ease; box-shadow: 0 0 5px rgba(0, 255, 150, 0.3);"
+                    onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"
+                    class="animate">
+
+                    <div style="font-size: 2em;">
+                        <i class="fas fa-vest"></i>
+                    </div>
+                    <div style="margin-left: 15px;">
+                        <h5 style="font-weight: bold;">Affordable Travel for Everyone</h5>
+                        <p style="color: lightgray;">Enjoy great trips at the best prices, making travel accessible to all.</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+      
+    </main>
+    <br>
+
+    <div class="bg-cover pb-5 animate">
+        <!-- <div class="container-fluid py-5 text-center"> -->
+
+            <h3 class="text-dark lead fw-bold my-4 py-2 container text-center">
+                <b style="font-size: 20px; color: white;" class="lead">Activities Available at These Destinations</b><br>
+                Explore thrilling adventures and immerse yourself in nature’s beauty—while we showcase these experiences, we do not offer them directly.
+            </h3>
+            
+        <!-- </div> -->
+        <div class="container">
+            <div class="carousel">
+                <div class="offer-card" data-bg="Rishikesh-river-rafting.jpg" style="margin-right: 15px;">
+                    <i class="fas fa-warehouse"></i>
+                    <h5>River Rafting</h5>
+                    <p>Experience the thrill of rushing rapids and scenic landscapes.</p>
+                </div>
+            
+                <div class="offer-card" data-bg="t.jpg" style="margin-right: 15px;">
+                    <i class="fas fa-train"></i>
+                    <h5>Tent Camping</h5>
+                    <p>Reconnect with nature under a starry sky in a cozy tent.</p>
+                </div>
+            
+                <div class="offer-card" data-bg="w.jpg" style="margin-right: 15px;">
+                    <i class="fas fa-bus"></i>
+                    <h5>Water Sports</h5>
+                    <p>Enjoy jet skiing, parasailing, and other exciting water activities.</p>
+                </div>
+            
+                <div class="offer-card" data-bg="s.jpg" style="margin-right: 15px;">
+                    <i class="fas fa-mountain"></i>
+                    <h5>Sightseeing</h5>
+                    <p>Explore breathtaking landmarks and cultural attractions.</p>
+                </div>
+            
+                <div class="offer-card" data-bg="m.jpg" style="margin-right: 15px;">
+                    <i class="fas fa-biking"></i>
+                    <h5>Mountain Climbing</h5>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <script>
+        $(document).ready(function () {
+            $(".carousel").slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+
+            $(".offer-card").hover(function () {
+                let bg = $(this).attr("data-bg");
+                $(this).css("background", `url(${bg}) no-repeat center center`).css("background-size", "cover");
+            }, function () {
+                $(this).css("background", "black");
+            });
+        });
+
+    </script>
+
+    <section class="container py-5 ">
+        <!-- Header Section -->
+        <div class="row d-flex justify-content-between align-items-center mb-4">
+            <!-- Left Column: Upcoming Events Heading -->
+            <div class="col-md-8 d-flex flex-column justify-content-center">
+                <div class="d-inline-block py-2 position-relative">
+                    <span class="opacity-25 position-absolute w-100 h-100 z-10 "
+                        style="background-color: #171918; height: 100px;"></span>
+                    <h6 class="text-dark position-relative lead m-0  "
+                        style="font-weight: bold; font-family:'Times New Roman', Times, serif; font-size: 40px;">
+                        <u>Upcoming Events in India</u></h6>
+                </div>
+                <br>
+                <h4 class="h2 font-weight-bold text-dark m-0">Exciting Festivals & Travel Events Across India</h4>
+            </div>
+            <!-- Right Column: View More Button -->
+            <div class="col-md-4 d-flex justify-content-md-end align-items-center">
+                <button
+                    class="btn px-5 py-3 font-weight-bold shadow-lg border-0 rounded-lg position-relative overflow-hidden travel-btn">
+                    <span class="globe-icon">📅</span> View All Events
+                </button>
+            </div>
+        </div>
+
+        <!-- Events Section -->
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <!-- Event Card 1 -->
+                <div class="event-card shadow-sm p-3 " style="background-color: #f7eded; border-radius: 2px; height: 100%;">
+                    <div class="position-relative mb-4">
+                        <img src="holi.jpeg" alt="Holi Festival" class="w-100 rounded-lg h-100 object-cover hover-img">
+                        <div style="background-color: #651111; border-radius: 4px;"
+                            class=" text-white px-3 py-1 position-absolute bottom-0 start-0 date-trigger"
+                            data-bs-toggle="modal" data-bs-target="#eventModal1">
+                            March 25, 2025
+                        </div>
+                    </div>
+                    <h5 class="fw-bold text-dark">Holi Festival - Mathura & Vrindavan</h5>
+                    <p class="text-muted small">Experience the festival of colors where Lord Krishna played Holi.</p>
+                </div>
+            </div>
+
+            <!-- Modal for Event 1 -->
+            <div class="modal fade" id="eventModal1" tabindex="-1" aria-labelledby="eventModal1Label"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="eventModal1Label">Holi Festival - Mathura & Vrindavan</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="holi2.jpg" alt="Holi Festival" class="w-100  mb-4 shadow-lg">
+                            <p><strong>Date:</strong> March 25, 2025</p>
+                            <p><strong>Location:</strong> Mathura & Vrindavan</p>
+                            <p><strong>Description:</strong> Experience the festival of colors where Lord Krishna played
+                                Holi. The festival includes vibrant parades, traditional dances, and, of course,
+                                colorful powder thrown in celebration.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <!-- Event Card 2 -->
+                <div class="event-card shadow-sm p-3 " style="background-color: #f7eded; border-radius: 2px;">
+                    <div class="position-relative mb-4">
+                        <img src="pushkar.jpg" alt="Pushkar Camel Fair"
+                            class="w-100 rounded-lg h-100 object-cover hover-img">
+                        <div style="background-color: #651111; border-radius: 4px;"
+                            class=" text-white px-3 py-1 position-absolute bottom-0 start-0 date-trigger"
+                            data-bs-toggle="modal" data-bs-target="#eventModal2">
+                            Nov 18-25, 2025
+                        </div>
+                    </div>
+                    <h5 class="fw-bold text-dark">Pushkar Camel Fair - Rajasthan</h5>
+                    <p class="text-muted small">One of the largest camel fairs in the world, with cultural performances.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Modal for Event 2 -->
+            <div class="modal fade" id="eventModal2" tabindex="-1" aria-labelledby="eventModal2Label"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="eventModal2Label">Pushkar Camel Fair - Rajasthan</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="p3.jpg" alt="Pushkar Camel Fair" class="w-100 rounded-lg mb-3">
+                            <p><strong>Date:</strong> Nov 18-25, 2025</p>
+                            <p><strong>Location:</strong> Pushkar, Rajasthan</p>
+                            <p><strong>Description:</strong> One of the largest camel fairs in the world, with cultural
+                                performances, camel races, and vibrant markets.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <!-- Event Card 3 -->
+                <div class="event-card shadow-sm p-3 " style="background-color: #f7eded; border-radius: 2px;height: 100%;">
+                    <div class="position-relative mb-4">
+                        <img src="diwali.jpg" alt="Diwali" class="w-100 rounded-lg h-100 object-cover hover-img">
+                        <div style="background-color: #651111; border-radius: 4px;"
+                            class=" text-white px-3 py-1 position-absolute bottom-0 start-0 date-trigger"
+                            data-bs-toggle="modal" data-bs-target="#eventModal3">
+                            Oct 21, 2025
+                        </div>
+                    </div>
+                    <h5 class="fw-bold text-dark">Diwali - Pan India</h5>
+                    <p class="text-muted small">The festival of lights, celebrated with grand fireworks and festivities.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Modal for Event 3 -->
+            <div class="modal fade" id="eventModal3" tabindex="-1" aria-labelledby="eventModal3Label"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="eventModal3Label">Diwali - Pan India</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="d1.jpg" alt="Diwali" class="w-100 rounded-lg mb-3">
+                            <p><strong>Date:</strong> Oct 21, 2025</p>
+                            <p><strong>Location:</strong> Pan India</p>
+                            <p><strong>Description:</strong> The festival of lights, celebrated with grand fireworks,
+                                family gatherings, and colorful decorations all across India.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <!-- Event Card 4 -->
+                <div class="event-card shadow-sm p-3 " style="background-color: #f7eded; border-radius: 2px;height: 100%;">
+                    <div class="position-relative mb-4">
+                        <img src="j2.jpg" alt="Desert Festival"
+                            class="w-100 rounded-lg h-100 object-cover hover-img">
+                        <div style="background-color: #651111; border-radius: 4px;"
+                            class=" text-white px-3 py-1 position-absolute bottom-0 start-0 date-trigger"
+                            data-bs-toggle="modal" data-bs-target="#eventModal4">
+                            Feb 5-7, 2025
+                        </div>
+                    </div>
+                    <h5 class="fw-bold text-dark">Jaisalmer Desert Festival - Rajasthan</h5>
+                    <p class="text-muted small">A mesmerizing cultural festival with folk performances and camel races.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Modal for Event 4 -->
+            <div class="modal fade" id="eventModal4" tabindex="-1" aria-labelledby="eventModal4Label"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="eventModal4Label">Jaisalmer Desert Festival - Rajasthan</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="j.jpg.crdownload" alt="Jaisalmer Desert Festival"
+                                class="w-100 rounded-lg mb-3">
+                            <p><strong>Date:</strong> Feb 5-7, 2025</p>
+                            <p><strong>Location:</strong> Jaisalmer, Rajasthan</p>
+                            <p><strong>Description:</strong> A mesmerizing cultural festival with folk performances,
+                                camel races, and beautiful desert landscapes.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <!-- Event Card 5 -->
+                <div class="event-card shadow-sm p-3 " style="background-color: #f7eded; border-radius: 2px; height: 100%;">
+                    <div class="position-relative mb-4">
+                        <img src="k1.jpg" alt="Nehru Trophy Boat Race"
+                            class="w-100 rounded-lg h-100 object-cover hover-img">
+                        <div style="background-color: #651111; border-radius: 4px;"
+                            class=" text-white px-3 py-1 position-absolute bottom-0 start-0 date-trigger"
+                            data-bs-toggle="modal" data-bs-target="#eventModal5">
+                            Aug 9, 2025
+                        </div>
+                    </div>
+                    <h5 class="fw-bold text-dark">Nehru Trophy Boat Race - Kerala</h5>
+                    <p class="text-muted small">Watch an adrenaline-pumping boat race in the scenic backwaters of
+                        Kerala.</p>
+                </div>
+            </div>
+
+            <!-- Modal for Event 5 -->
+            <div class="modal fade" id="eventModal5" tabindex="-1" aria-labelledby="eventModal5Label"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="eventModal5Label">Nehru Trophy Boat Race - Kerala</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="k.jpg" alt="Nehru Trophy Boat Race" class="w-100 rounded-lg mb-3">
+                            <p><strong>Date:</strong> Aug 9, 2025</p>
+                            <p><strong>Location:</strong> Alappuzha, Kerala</p>
+                            <p><strong>Description:</strong> An adrenaline-pumping boat race in the scenic backwaters of
+                                Kerala, with traditional boats called "Chundan Vallams."</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <div class="container-fluid p-4" id="auth-section"
+        style="background: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 2px;">
+        <div class="row align-items-center">
+            <!-- Image Section for Professional Look -->
+            <div class="col-md-6 text-center">
+                <img src="c.jpg" alt="Professional Image" class="img-fluid "
+                    style="max-width: 100%; border-radius: 2px;">
+            </div>
+
+            <!-- Authentication Form Section -->
+            <div class="col-md-6">
+                <div class="form-content mx-auto p-4 " 
+                    style="max-width: 400px; background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(15px);border-radius: 0;">
+
+                    <!-- Login Form -->
+                    <form id="loginForm" onsubmit="handleRegistration(event)" style="display: none;">
+                        <h4 class="text-center font-weight-bold text-dark">Login</h4>
+                        <div class="form-group">
+                            <label for="login-username" class="text-dark">Username</label>
+                            <input type="text" class="form-control" id="login-username" name="username"
+                                placeholder="Enter username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password" class="text-dark">Password</label>
+                            <input type="password" class="form-control" id="login-password" name="password"
+                                placeholder="Enter password" required>
+                        </div>
+                        <button type="submit" class="btn btn-dark btn-block font-weight-bold">Login</button>
+                        <p class="text-center mt-3 text-dark">
+                            Don't have an account? <a class="font-weight-bold" onclick="showForm('signupForm')">Sign
+                                up</a>
+                        </p>
+                    </form>
+
+                    <!-- Sign-Up Form -->
+                    <form id="signupForm" onsubmit="handleRegistration(event)">
+                        <h4 class="text-center font-weight-bold text-dark">Sign Up</h4>
+                        <div class="form-group">
+                            <label for="signup-username" class="text-dark">Username</label>
+                            <input type="text" class="form-control" id="signup-username" name="username"
+                                placeholder="Enter username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-password" class="text-dark">Password</label>
+                            <input type="password" class="form-control" id="signup-password" name="password"
+                                placeholder="Enter password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-contact" class="text-dark">Contact</label>
+                            <input type="tel" class="form-control" id="signup-contact" name="contact"
+                                placeholder="Enter contact number" pattern="[0-9]{10}" required>
+                        </div>
+                        <button type="submit" class="btn btn-dark btn-block font-weight-bold">Sign Up</button>
+                        <p class="text-center mt-3 text-dark">
+                            Already have an account? <a class="font-weight-bold"
+                                onclick="showForm('loginForm')">Login</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <script>
+    // Form validation and submission (Login)
+document.getElementById('loginForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    const username = document.getElementById('login-username');
+    const password = document.getElementById('login-password');
+    let valid = true;
+
+    if (username.value.trim() === '') {
+        username.classList.add('is-invalid');
+        valid = false;
+    } else {
+        username.classList.remove('is-invalid');
+    }
+
+    if (password.value.trim() === '') {
+        password.classList.add('is-invalid');
+        valid = false;
+    } else {
+        password.classList.remove('is-invalid');
+    }
+
+    if (valid) {
+        alert('Login successful!'); // Show success message
+
+        setTimeout(() => {
+            window.location.href = 'new-page.html'; // Redirect after clicking OK
+        }, 100);
+    }
+});
+
+// Form validation and submission (Sign-Up)
+document.getElementById('signupForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    const username = document.getElementById('signup-username');
+    const password = document.getElementById('signup-password');
+    const contact = document.getElementById('signup-contact');
+    let valid = true;
+
+    if (username.value.trim() === '') {
+        username.classList.add('is-invalid');
+        valid = false;
+    } else {
+        username.classList.remove('is-invalid');
+    }
+
+    if (password.value.trim() === '') {
+        password.classList.add('is-invalid');
+        valid = false;
+    } else {
+        password.classList.remove('is-invalid');
+    }
+
+    // Validate Contact (must be exactly 10 digits)
+    if (contact.value.trim() === '' || !/^\d{10}$/.test(contact.value)) {
+        contact.classList.add('is-invalid');
+        valid = false;
+    } else {
+        contact.classList.remove('is-invalid');
+    }
+
+    if (valid) {
+        alert('Sign-Up successful!'); // Show success message
+
+        setTimeout(() => {
+            window.location.href = 'new-page.html'; // Redirect after clicking OK
+        }, 100);
+    }
+});
+
+   </script>
+    
+
+    <!-- 
+    <br><br><br>
+<div  style="background: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 1px; "> -->
+
+    <!-- </div> -->
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="my-5">
+        <div class="container">
+            <h2 class="text-center font-italic text-dark mb-4">Explore Our Gallery</h2>
+            <div class="row">
+                <div class="gallery-container">
+                    <div class="gallery-item animate">
+                        <img src="g1.jpg" alt="Image 1">
+                        <div class="overlay">Heritage</div>
+                    </div>
+                    <div class="gallery-item animate">
+                        <img src="g5.jpg" alt="Image 2">
+                        <div class="overlay">Vinatge</div>
+                    </div>
+                    <div class="gallery-item animate">
+                        <img src="g3.JPG" alt="Image 3">
+                        <div class="overlay">Downtown</div>
+                    </div>
+                    <div class="gallery-item animate">
+                        <img src="g2.jpg" alt="Image 4">
+                        <div class="overlay">Timemark</div>
+                    </div>
+                    <div class="gallery-item animate">
+                        <img src="g4.jpg" alt="Image 5">
+                        <div class="overlay">Sandside</div>
+                    </div>
+                    <div class="gallery-item animate">
+                        <img src="g6.jpg" alt="Image 6">
+                        <div class="overlay">TraditionalVibe</div>
+                    </div>
+                    <div class="gallery-item animate">
+                        <img src="s1.jpg" alt="Image 7">
+                        <div class="overlay">Seaside Bliss</div>
+                    </div>
+                    <div class="gallery-item animate">
+                        <img src="m1.jpg" alt="Image 8">
+                        <div class="overlay">Mountain Escape</div>
+                    </div>
+                    <!-- Add more images here -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+
+
+            <div class="footer-main">
+                <!-- Logo and Social Icons -->
+                <div class="footer-section">
+                    <img src="l.jpg" alt="Travel Bliss Logo" width="100">
+                    <p class="text-secondary">People travel not just for fun but to gain new experiences and unforgettable memories.</p>
+
+                    <div class="social-icons">
+                        <button class="social-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22.46 6c-.77.35-1.5.58-2.28.69.82-.48 1.44-1.25 1.74-2.15-.78.44-1.6.75-2.48.93a4.47 4.47 0 0 0-7.62 4.07A12.69 12.69 0 0 1 2 4.72a4.51 4.51 0 0 0 1.38 5.99 4.5 4.5 0 0 1-2.03-.56v.06c0 2.2 1.55 4.02 3.62 4.44-.38.1-.78.16-1.2.16-.29 0-.57-.03-.84-.08a4.49 4.49 0 0 0 4.19 3.11 8.99 8.99 0 0 1-5.56 1.92c-.36 0-.72-.02-1.08-.07a12.65 12.65 0 0 0 6.85 2"
+                                    fill="currentColor" />
+                            </svg>
+                        </button>
+                        <button class="social-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22 12a10 10 0 1 0-11.5 9.9V15.5H7.4V12h3.1V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.6.2 2.6.2v2.9h-1.5c-1.4 0-1.9.9-1.9 1.8V12h3.3l-.5 3.5h-2.8V22A10 10 0 0 0 22 12z"
+                                    fill="currentColor" />
+                            </svg>
+                        </button>
+                        <button class="social-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2.2c3.2 0 3.6 0 4.9.1a7 7 0 0 1 2.4.5 4.8 4.8 0 0 1 1.7 1.1c.5.5 1 1.1 1.2 1.7.3.7.5 1.4.6 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9a7 7 0 0 1-.5 2.4 4.8 4.8 0 0 1-1.1 1.7c-.5.5-1.1 1-1.7 1.2-.7.3-1.4.5-2.5.6-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1a7 7 0 0 1-2.4-.5 4.8 4.8 0 0 1-1.7-1.1c-.5-.5-1-1.1-1.2-1.7-.3-.7-.5-1.4-.6-2.5C2 15.6 2 15.2 2 12s0-3.6.1-4.9a7 7 0 0 1 .5-2.4 4.8 4.8 0 0 1 1.1-1.7c.5-.5 1.1-1 1.7-1.2.7-.3 1.4-.5 2.5-.6 1.3-.1 1.7-.1 4.9-.1zm0 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                                    fill="currentColor" />
+                            </svg>
+                        </button>
+                        <button class="social-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM2 8.9h6V22H2V8.9zM9.5 8.9h5v1.9h.1a5.5 5.5 0 0 1 5-2.5c5.3 0 6.2 3.5 6.2 8V22h-6v-7c0-1.7 0-3.8-2.3-3.8-2.3 0-2.7 1.8-2.7 3.7V22h-6V8.9z"
+                                    fill="currentColor" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Newsletter Subscription -->
+                <div class="footer-section">
+                    <h6>Newsletter</h6>
+                    <p class="text-secondary">Subscribe to our newsletter to get our latest updates & news.</p>
+                    <div class="newsletter">
+                        <input type="email" id="newsletter-email" placeholder="Email Address">
+                        <button class="subscribe-btn" onclick="subscribeNewsletter()">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <label class="text-secondary">
+                        <input type="checkbox"> I agree to all terms and policies
+                    </label>
+                    <p id="subscription-message" class="success-message">✔ Subscribed Successfully!</p>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="footer-section" id="footer">
+                    <h6>Contact</h6>
+                    <p class="text-secondary">&#128222;
+                        +00 (123) 456 889</p>
+                    <p class="text-secondary">&#9993;
+                        info@travelbliss.com</p>
+                    <p class="text-secondary">&#128205;
+                        583 Main Street, NY, USA</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">© 2024 Copyrights by <b>Travel Bliss</b>. All Rights Reserved</div>
+
+
+
+
+
+    <!-- Back to Top Button -->
+    <div id="backToTop" title="Back to Top"></div>
+
+
+
+    </main>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        
+        // Get the button
+        const backToTop = document.getElementById('backToTop');
+
+        // Show or hide the button based on scroll position
+        window.onscroll = function () {
+            if (document.documentElement.scrollTop > 100) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        };
+
+        // Smooth scroll to the top when clicked
+        backToTop.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+            });
+        });
+
+        function handleRegistration(event) {
+            event.preventDefault();  // Prevent form submission
+            // Redirect to the new page
+            window.location.href = "new-page.html";
+        }
+
+
+
+
+        document.querySelectorAll('.dropdown-menu a').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent default behavior of the anchor tag
+                const target = document.querySelector(link.getAttribute('data-bs-target'));
+                const sections = ['#aboutMission', '#aboutTeam'];
+
+                sections.forEach(function (section) {
+                    const element = document.querySelector(section);
+                    if (element !== target && element.classList.contains('show')) {
+                        element.classList.remove('show'); // Close other sections
+                    }
+                });
+
+                target.classList.toggle('show'); // Toggle the clicked section
+            });
+        });
+
+
+        let slideIndex = 0;
+        function showSlides() {
+            let slides = document.querySelectorAll(".carousel-slide");
+            slides.forEach(slide => (slide.style.opacity = "0"));
+            slides[slideIndex].style.opacity = "1";
+            slideIndex = (slideIndex + 1) % slides.length;
+            setTimeout(showSlides, 4000); // Change every 4 seconds
+        }
+        showSlides();
+
+
+
+        function subscribeNewsletter() {
+            let emailInput = document.getElementById("newsletter-email");
+            let message = document.getElementById("subscription-message");
+
+            if (emailInput.value.trim() === "") {
+                alert("Please enter your email address.");
+                return;
+            }
+
+            message.style.display = "block";
+            emailInput.value = "";
+            setTimeout(() => message.style.display = "none", 3000);
+        }
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            function revealOnScroll() {
+                const elements = document.querySelectorAll(".animate");
+                elements.forEach((el) => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 100) {
+                        el.classList.add("show");
+                    }
+                });
+            }
+            window.addEventListener("scroll", revealOnScroll);
+            revealOnScroll(); // Trigger on load
+        });
+
+
+    </script>
+</body>
+
+</html>
+
+<!-- <div class="container-fluid mt-5 " id="feedback">
+
+    <div class="row mt-4" id="feedback">
+        <!-- Feedback Form (Left Section) -->
+<!-- <div class="col-lg-6 mx-auto" id="feedbackContainer">
+            <h2 class="text-center text-white" id="feedback">Customer Feedback</h2>
+            <div class="feedback-card">
+                <form id="feedbackForm">
+                    <div class="mb-3">
+                        <label for="feedback-name" class="form-label text-white">Your Name:</label>
+                        <input type="text" style="color: #333;" class="form-control feedback-input"
+                            id="feedback-name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="feedback-message" class="form-label text-white">Your Feedback:</label>
+                        <textarea style="color: #fff3f3;" class="form-control feedback-input" id="feedback-message"
+                            rows="4" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="feedback-rating" class="form-label text-white">Rating:</label>
+                        <select class="form-control feedback-input" id="feedback-rating" required>
+                            <option value="5">⭐⭐⭐⭐⭐</option>
+                            <option value="4">⭐⭐⭐⭐ </option>
+                            <option value="3">⭐⭐⭐ </option>
+                            <option value="2">⭐⭐ </option>
+                            <option value="1">⭐ </option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-dark w-100 feedback-btn">Submit Feedback</button>
+                </form>
+            </div>
+        </div> -->
+
+<!-- Recent Feedback (Right Section, Hidden Initially) -->
+<!-- <div class="col-lg-6 hidden text-dark" id="recentFeedbackContainer">
+            <h3 class="text-center text-white">Recent Feedback</h3>
+            <div id="feedbackList" class=" text-dark list-group mt-3">
+                <!-- Feedback will be dynamically inserted here -->
+<!-- </div>
+        </div>
+    </div>
+</div> -->

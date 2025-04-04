@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Add Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="about.css">
+</head>
+
+<body style="background-color: #687f7f;">
+    <!-- Header with Sticky Position -->
+    <header style="position: sticky; top: 0; background-color: #333; padding: 10px; z-index: 2000; height: 80px;">
+        <a href="index.html" class="navbar-brand logo" id="logo">
+            <img src="logo.jpeg" style="width: 70px; ">
+        </a>
+
+        <h1 style="font-family: 'Times New Roman', Times, serif; text-align: center; color: #ffffff; text-align: center; margin-left: 300px; ">
+           Discover the world with us!!
+        </h1>
+
+        <div class="header-buttons">
+            <a href="index.html" class="btn btn-home">Home</a>
+            <a href="about.html" class="btn btn-back">About Us</a>
+            <a href="blog.html" class="btn btn-back">Blog</a>
+            <a href="index.html" class="btn btn-back">Back</a>
+        </div>
+    </header>
+
+
+    <!-- Modal Structure -->
+    <div id="thankYouModal" class="modal" style="display: none;">
+        <div class="modal-content" style="background-color: #9e7e66; padding: 20px; border-radius: 5px;">
+            <h3>Thank You for Visiting Our Website</h3>
+            <p>Would you like to go to the home page?</p>
+            <div class="modal-footer" style="text-align: center;">
+                <a href="index.html" class="btn btn-success">Yes</a>
+                <a href="new-page.html" class="btn btn-danger">No</a>
+            </div>
+        </div>
+    </div>
+
+   <!-- Our Journey Section -->
+<section class="text-center my-5 animate" style="padding: 50px;  border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+    <h2 class="font-italic text-dark mb-4" style="font-size: 2.5rem;">Our Travel Story</h2>
+<p class="lead text-dark mb-4" style="font-size: 18px; max-width: 800px; margin: 0 auto; font-family: Georgia, 'Times New Roman', Times, serif;">
+    Our passion for travel started with a simple idea—making every journey seamless and memorable. From exploring hidden gems to discovering world-famous destinations, we've helped travelers create unforgettable experiences.  
+</p>
+<p class="lead text-dark mb-4" style="font-size: 18px; max-width: 800px; margin: 0 auto; font-family: Georgia, 'Times New Roman', Times, serif;">
+    Whether you’re an adventurer seeking thrilling experiences, a leisure traveler looking for relaxation, or someone planning a dream vacation, we bring you the best destinations, travel tips, and exclusive deals. Our mission is to inspire and connect explorers across the globe, making travel accessible, hassle-free, and truly unforgettable.
+</p>
+
+
+    <div class="row animate">
+        <!-- Milestone 1 -->
+       <!-- Milestone 1 -->
+<div class="col-md-4 mb-4">
+    <div class="journey-card" style="border-radius: 2px; background-image: url('j1.jpg'); background-size: cover; background-position: center; height: 250px; position: relative; overflow: hidden; cursor: pointer;">
+        <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.3); transition: background 0.3s ease;"></div>
+        <div class="text-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center; opacity: 0; transition: opacity 0.3s ease; pointer-events: none;">
+            <h4 style="margin: 0; font-family: Arial, sans-serif;">2020: The Idea</h4>
+            <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Our vision to simplify travel planning began here.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Milestone 2 -->
+<div class="col-md-4 mb-4">
+    <div class="journey-card" style="border-radius: 2px; background-image: url('j3.jpg'); background-size: cover; background-position: center; height: 250px; position: relative; overflow: hidden; cursor: pointer;">
+        <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.3); transition: background 0.3s ease;"></div>
+        <div class="text-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center; opacity: 0; transition: opacity 0.3s ease; pointer-events: none;">
+            <h4 style="margin: 0; font-family: Arial, sans-serif;">2022: Platform Launch</h4>
+            <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Our platform went live, revolutionizing travel planning.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Milestone 3 -->
+<div class="col-md-4 mb-4">
+    <div class="journey-card" style="border-radius: 2px; background-image: url('j4.png'); background-size: cover; background-position: center; height: 250px; position: relative; overflow: hidden; cursor: pointer;">
+        <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.3); transition: background 0.3s ease;"></div>
+        <div class="text-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center; opacity: 0; transition: opacity 0.3s ease; pointer-events: none;">
+            <h4 style="margin: 0; font-family: Arial, sans-serif;">Future Goals</h4>
+            <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Expanding to new destinations and enhancing AI recommendations.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.journey-card').forEach(card => {
+        card.addEventListener('mouseover', function () {
+            this.querySelector('.text-overlay').style.opacity = "1";
+        });
+        card.addEventListener('mouseout', function () {
+            this.querySelector('.text-overlay').style.opacity = "0";
+        });
+    });
+</script>
+
+    </div>
+</section>
+
+    <!-- Our Mission Section -->
+<section id="aboutMission" style=" padding: 50px;" class="animate">
+    <h2 class="text-center mb-4 text-dark font-italic" style="font-size: 2.5rem;">Our Mission</h2>
+    <div class="timeline">
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item animate" style="border-radius: 12px; padding: 20px; background-color: rgba(0, 0, 0, 0.5); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin-bottom: 20px; transition: transform 0.3s ease-in-out;">
+            <h5><i class="fas fa-lightbulb"></i> 2020: The Vision</h5>
+            <p style="font-family: Georgia, 'Times New Roman', Times, serif;">We envisioned a platform to simplify travel planning for all types of travelers. Our mission was clear: make travel planning easier, faster, and more enjoyable.</p>
+        </div>
+        <!-- Timeline Item 2 -->
+        <div class="timeline-item animate" style="border-radius: 12px; padding: 20px; background-color: rgba(0, 0, 0, 0.5); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin-bottom: 20px; transition: transform 0.3s ease-in-out;">
+            <h5><i class="fas fa-plane"></i> 2022: Platform Launch</h5>
+            <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Our platform went live and instantly helped thousands of travelers plan unforgettable trips, discover amazing destinations, and book their ideal accommodations.</p>
+        </div>
+        <!-- Timeline Item 3 -->
+        <div class="timeline-item animate" style="border-radius: 12px; padding: 20px; background-color: rgba(0, 0, 0, 0.5); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin-bottom: 20px; transition: transform 0.3s ease-in-out;">
+            <h5><i class="fas fa-rocket"></i> 2025: The Future</h5>
+            <p style="font-family: Georgia, 'Times New Roman', Times, serif;">We're constantly evolving, and our goal is to enhance our platform with AI-powered recommendations, expand to more destinations, and help even more people explore the world.</p>
+        </div>
+    </div>
+</section>
+
+   <!-- Our Team Section -->
+<section id="aboutTeam" class="text-center my-5 animate" style="padding: 50px;">
+    <h2 class="font-italic text-dark mb-4">Meet Our Team</h2>
+    <p class="text-muted" style="max-width: 700px; margin: 0 auto; font-size: 18px;">
+        A passionate group of travel enthusiasts, designers, and developers working together to create seamless and memorable travel experiences.
+    </p>
+
+
+   <!-- Bootstrap Carousel -->
+<div id="teamCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" style="max-width: 900px; margin: 30px auto;">
+    <div class="carousel-inner">
+        <!-- First Row -->
+        <div class="carousel-item active">
+            <div style="display: flex; justify-content: center; gap: 30px;">
+                <div style="text-align: center; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 250px;">
+                    <img src="tm1.jpg" alt="Aarav Mehta" class="team-img" style="height: 150px; width: 150px;">
+                    <h5 style="margin-top: 15px; color: #222; font-size: 20px;">Aarav Mehta</h5>
+                    <p style="color: #000000; font-size: 14px;">Co-Founder & CEO</p>
+                </div>
+                <div style="text-align: center; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 250px;">
+                    <img src="tm2.jpg" alt="Milonee Patel" class="team-img" style="height: 150px; width: 150px;">
+                    <h5 style="margin-top: 15px; color: #222; font-size: 20px;">Milonee Patel</h5>
+                    <p style="color: #000000; font-size: 14px;">Lead Designer</p>
+                </div>
+                <div style="text-align: center; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 250px;">
+                    <img src="tm3.jpg" alt="Rohan Sharma" class="team-img" style="height: 150px; width: 150px;">
+                    <h5 style="margin-top: 15px; color: #222; font-size: 20px;">Rohan Sharma</h5>
+                    <p style="color: #000000; font-size: 14px;">Head of Development</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="carousel-item">
+            <div style="display: flex; justify-content: center; gap: 30px;">
+                <div style="text-align: center; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 250px;">
+                    <img src="tm4.jpg" alt="Ananya Verma" class="team-img" style="height: 150px; width: 150px;">
+                    <h5 style="margin-top: 15px; color: #222; font-size: 20px;">Ananya Verma</h5>
+                    <p style="color: #000000; font-size: 14px;">Marketing Head</p>
+                </div>
+                <div style="text-align: center; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 250px;">
+                    <img src="tm5.jpg" alt="Vikram Nair" class="team-img" style="height: 150px; width: 150px;">
+                    <h5 style="margin-top: 15px; color: #222; font-size: 20px;">Vikram Nair</h5>
+                    <p style="color: #010101; font-size: 14px;">Finance Manager</p>
+                </div>
+                <div style="text-align: center; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 250px;">
+                    <img src="tm6.jpg" alt="Neha Kapoor" class="team-img" style="height: 150px; width: 150px;">
+                    <h5 style="margin-top: 15px; color: #222; font-size: 20px;">Neha Kapoor</h5>
+                    <p style="color: #000000; font-size: 14px;">Customer Relations</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#teamCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#teamCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+</div>
+
+
+    <div class="mt-4">
+        <p style="font-family: Georgia, 'Times New Roman', Times, serif; color: #333;"><i class="fas fa-suitcase-rolling text-primary"></i> Our team has visited 50+ countries collectively.</p>
+        <p style="font-family: Georgia, 'Times New Roman', Times, serif; color: #333;"><i class="fas fa-laptop-code text-success"></i> Over 1 million lines of code have been written to build our platform.</p>
+        <p style="font-family: Georgia, 'Times New Roman', Times, serif; color: #333;"><i class="fas fa-coffee text-warning"></i> We consume an average of 100 cups of coffee per week!</p>
+    </div>
+</section>
+
+
+    <!-- Footer Section -->
+<footer class="text-center text-dark  py-4 ">
+    <div class="container ">
+        <p>© 2025 Your Travel Platform | All Rights Reserved</p>
+        <div class="social-media ">
+            <!-- Updated href links to point to real social media pages -->
+            <a href="https://www.facebook.com" target="_blank" class="text-dark me-3">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="text-dark me-3">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="text-dark me-3">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" class="text-dark me-3">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.snapchat.com" target="_blank" class="text-dark">
+                <i class="fab fa-snapchat-ghost"></i> <!-- Add Snapchat icon -->
+            </a>
+        </div>
+    </div>
+</footer>
+
+ <!-- Back to Top Button -->
+ <div id="backToTop" title="Back to Top"></div>
+
+
+<script>
+
+        // Get the button
+        const backToTop = document.getElementById('backToTop');
+
+        // Show or hide the button based on scroll position
+        window.onscroll = function () {
+            if (document.documentElement.scrollTop > 100) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        };
+
+        // Smooth scroll to the top when clicked
+        backToTop.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+            });
+        });
+    document.addEventListener("DOMContentLoaded", function () {
+        function revealOnScroll() {
+            const elements = document.querySelectorAll(".animate");
+            elements.forEach((el) => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    el.classList.add("show");
+                }
+            });
+        }
+        window.addEventListener("scroll", revealOnScroll);
+        revealOnScroll(); // Trigger on load
+    });
+    </script>
+    <!-- Add Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

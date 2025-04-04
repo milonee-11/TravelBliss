@@ -1,0 +1,855 @@
+ /* Footer Styling */
+ .footer {
+    background: #111;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Top Section */
+.footer-top {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-card {
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    transition: 0.3s;
+}
+
+.footer-card:hover {
+    transform: translateY(-5px);
+}
+
+.round-btn {
+    background: #28a745;
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Main Footer Section */
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    background: #555;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.social-btn:hover {
+    background: #28a745;
+}
+
+/* Newsletter Subscription */
+.newsletter {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.newsletter input {
+    width: 70%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.subscribe-btn {
+    background: #a78528;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.success-message {
+    color: #85a728;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background: black;
+    color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .footer-top,
+    .footer-main {
+        flex-direction: column;
+    }
+
+    .newsletter {
+        flex-direction: column;
+    }
+
+    .newsletter input {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+
+    .subscribe-btn {
+        width: 100%;
+        border-radius: 5px;
+    }
+}
+
+
+
+/* CSS for hiding sections */
+.section-hidden {
+    display: none;
+}
+
+
+
+/* Hero Section */
+.explore-container {
+    background: url('dest.jpg'), #4f5651;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    /* border-radius: 2px; */
+}
+
+/* Feature Icons */
+.icon-box {
+    background-color: #3a3c3a;
+    color: white;
+    padding: 15px;
+    border-radius: 3px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+/* Hover Effect */
+.icon-box:hover {
+    background-color: #242725;
+    /* Lighter shade on hover */
+    transform: scale(1.1);
+    /* Slightly scale up the icon */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* Add a shadow on hover */
+}
+
+
+
+
+.image-banner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.image-card {
+    position: relative;
+    width: 350px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay p {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+}
+
+.image-card:hover .overlay {
+    opacity: 1;
+}
+
+/* Back to Top Button Styling */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #40554e, #36624b);
+    /* Gold and brown gradient */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    /* Circular button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    /* Elevated shadow */
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0;
+    /* Initially hidden */
+    visibility: hidden;
+    /* Ensures it's not interactive when hidden */
+    transform: scale(0.9);
+    /* Slightly smaller initially */
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Show the button when visible */
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    /* Full size */
+}
+
+/* Hover Effect */
+#backToTop:hover {
+    background: linear-gradient(135deg, #4ca0a0, #4a6f62);
+    /* Reverse gradient */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    /* Intensify shadow */
+    transform: scale(1.1);
+    /* Slight zoom */
+}
+
+/* Active (on click) */
+#backToTop:active {
+    transform: scale(0.95);
+    /* Shrink on click */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Design */
+#backToTop::after {
+    content: "⮝";
+    /* Up arrow with a circular base */
+    font-family: Arial, sans-serif;
+    font-size: 26px;
+}
+
+
+
+.list-group-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 5px solid #27ae60;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+.team-member-img {
+    transition: transform 0.3s ease;
+}
+
+.team-member-img:hover {
+    transform: scale(1.1);
+    /* Zoom in the image by 10% */
+}
+
+
+.accordion-button:hover {
+    background-color: #fff !important;
+    color: #34495e !important;
+    border-color: #34495e !important;
+    cursor: pointer;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.accordion-body {
+    font-family: 'Lora', serif;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.display-4 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #fff;
+}
+
+
+
+.hover-scale {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+}
+
+.btn-primary:hover {
+    background-color: #357abd;
+    border-color: #357abd;
+}
+
+
+
+
+.bg-cover {
+    background: url("bg-02.jpg") no-repeat center center;
+    background-size: cover;
+    padding-bottom: 60px;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    /* width: 100%; */
+}
+
+.offer-card {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    height: 200px;
+    transition: background 0.3s ease-in-out;
+    position: relative;
+}
+
+.offer-card:hover {
+    background-size: cover;
+    background-position: center;
+}
+
+.offer-card i {
+    font-size: 50px;
+    color: orange;
+}
+
+.offer-card:hover i {
+    color: lightgreen;
+}
+
+.offer-card h5 {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.offer-card p {
+    font-size: 14px;
+    color: lightgray;
+}
+
+.arrow-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: green;
+    color: rgb(33, 30, 30);
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.offer-card:hover .arrow-btn {
+    opacity: 1;
+}
+
+
+
+
+/* Blog Card Styles */
+.blog-card {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Image Styles */
+.hover-img {
+    transition: opacity 0.3s ease;
+}
+
+/* Image Hover Effect */
+.blog-card img:hover {
+    opacity: 0.8;
+}
+
+/* Orange Background for Tags */
+.bg-orange {
+    background-color: #ff6600;
+    color: white;
+    padding: 4px 8px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1;
+    /* transform: rotate(-10deg); Apply the rotation here directly */
+    border-radius: 5px;
+}
+
+
+/* Styling for the "View More" button (Optional) */
+.btn-success {
+    background-color: #28a745;
+    /* Bootstrap Success Color */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+/* Utility classes */
+.position-relative {
+    position: relative;
+}
+
+.font-weight-bold {
+    font-weight: 700;
+}
+
+.h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.text-success {
+    color: #28a745;
+}
+
+.text-gray-600 {
+    color: #718096;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.opacity-15 {
+    opacity: 0.15;
+}
+
+
+
+.z-10 {
+    z-index: 10;
+}
+
+/* Responsiveness for View More Button */
+@media (max-width: 992px) {
+    .d-none.d-lg-block {
+        display: none !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .d-block.d-md-none {
+        display: block !important;
+    }
+}
+
+
+
+
+/* Background Image */
+.hero {
+    margin-top: 70px;
+    height: 100vh;
+    background: url('your-background-image.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+/* Header Fullscreen */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Carousel Container */
+.carousel-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Individual Slide */
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlapping Hero Content */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.animated-welcome {
+    font-size: 3rem;
+    color: rgb(155, 199, 225);
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.animated-text {
+    font-size: 18px;
+    color: white;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* Keyframes for Fade-in Effect */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+.travel-btn {
+    background: linear-gradient(135deg, #5c5c5c, #909090);
+    /* Elegant Grey Gradient */
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(100, 100, 100, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.travel-btn:hover {
+    background: linear-gradient(135deg, #909090, #5c5c5c);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(100, 100, 100, 0.6);
+}
+
+.globe-icon {
+    display: inline-block;
+    font-size: 20px;
+    opacity: 0;
+    transform: translateX(-15px);
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.travel-btn:hover .globe-icon {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* Hover effect on the date */
+.date-trigger {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.date-trigger:hover {
+    background-color: #ff8a00;
+    /* Nice color change on hover */
+    transform: scale(1.1);
+}
+
+/* Modal animation */
+.modal.fade .modal-dialog {
+    border-radius: 10px;
+    transform: scale(0.8);
+    transition: transform 0.5s ease-in-out;
+}
+
+.modal.show .modal-dialog {
+    transform: scale(1);
+}
+
+/* Modal backdrop - disable closing when clicking outside */
+.modal-backdrop {
+    opacity: 0.8;
+    z-index: 1040;
+}
+
+/* Modal content - add some nice background */
+.modal-content {
+    background: linear-gradient(145deg, #756d6f, #685959);
+    color: rgb(22, 20, 20);
+    border-radius: 3px;
+    border: none;
+}
+
+/* Modal header */
+.modal-header {
+    border-bottom: 2px solid #fff;
+}
+
+/* Customizing close button */
+.btn-close {
+    background-color: #302929;
+    border: none;
+    border-radius: 50%;
+}
+
+/* Hover effect for close button */
+.btn-close:hover {
+    background-color: #cfc0c0;
+}
+
+/* Image effect for better professionalism */
+.modal-body img {
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    height: 230px;
+}
+
+.modal-body img:hover {
+    transform: scale(1.05);
+}
+
+/* Text content styling */
+.modal-body p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.modal-body strong {
+    color: #e6bf7a;
+}
+
+/* Prevent modal from closing on outside click */
+.modal-dialog {
+    pointer-events: auto;
+}
+
+
+@keyframes glowingBorder {
+    0% {
+        box-shadow: 0 0 5px rgba(94, 108, 102, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(0, 255, 150, 0.6);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgba(0, 255, 150, 0.3);
+    }
+}
+
+
+
+
+/* Gallery Container (Masonry) */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* Flexible columns */
+    grid-gap: 20px;
+    /* Space between items */
+    grid-auto-rows: minmax(200px, auto);
+    /* Dynamic row height */
+    margin-top: 20px;
+}
+
+/* Gallery Item (with different sizes) */
+.gallery-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #000;
+}
+
+/* Image Styles */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+
+/* Hover Effects */
+.gallery-item:hover img {
+    transform: scale(1.1);
+    /* Zoom-in effect */
+}
+
+.gallery-item:hover {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    /* Stronger shadow on hover */
+    transform: translateY(-5px);
+    /* Slight upward movement on hover */
+}
+
+/* Overlay with Text */
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+    /* Show overlay text */
+}
+
+
+/* Initially, all elements with class 'animate' are hidden */
+.animate {
+    opacity: 0;
+    transform: translateY(20px);
+    /* Optionally shift them down */
+    transition: opacity 1.5s ease, transform 1.5s ease;
+    /* Smooth fade-in and move */
+}
+
+/* When the element comes into view, we will add the 'show' class */
+.animate.show {
+    opacity: 1;
+    transform: translateY(0);
+    /* Elements will return to their original position */
+}

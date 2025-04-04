@@ -1,0 +1,285 @@
+
+
+.btn {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+
+.btn-home {
+    background-color: #283f45;
+    color: #fff;
+}
+
+.btn-home:hover
+{
+    background-color: #86a9c1;
+}
+.btn-back {
+    background-color: #2f653b;
+    color: #fff;
+}
+.btn-back:hover {
+    background-color: #86c194;
+}
+
+.team-member {
+    background-color:rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+/* background-color: #2d2d2d; */
+color: white;
+padding: 20px 0;
+box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer .social-media a {
+font-size: 1.5rem;
+transition: color 0.3s; /* Smooth color transition */
+text-decoration: none; /* Remove the underline */
+}
+
+footer .social-media a:hover {
+color: #e7bc13; /* Change color on hover */
+}
+
+
+.timeline-item {
+position: relative;
+transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover {
+transform: translateY(-10px);
+box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item h5 {
+font-size: 1.25rem;
+font-weight: bold;
+color: #a1c5bf;
+margin-bottom: 15px;
+}
+
+.timeline-item p {
+font-size: 1rem;
+color: #e2d3d3;
+}
+
+.timeline-item i {
+color: #e2c15e;
+margin-right: 10px;
+}
+
+.timeline-item:hover h5 {
+color: #e2c15e;
+}
+
+.journey-card {
+position: relative;
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+transition: transform 0.3s ease-in-out;
+}
+
+.journey-card:hover {
+transform: scale(1.05);
+}
+
+.journey-card:hover .overlay {
+background: rgba(0, 0, 0, 0.7);
+}
+
+.journey-card:hover .text-overlay {
+opacity: 1;
+}
+
+.overlay {
+transition: background 0.3s ease;
+}
+
+.text-overlay h4 {
+font-size: 1.5rem;
+font-weight: bold;
+color: white;
+}
+
+.text-overlay p {
+font-size: 1rem;
+font-weight: lighter;
+color: white;
+}
+
+
+/* Initially, all elements with class 'animate' are hidden */
+.animate {
+opacity: 0;
+transform: translateY(20px); /* Optionally shift them down */
+transition: opacity 2s ease, transform 2s ease; /* Smooth fade-in and move */
+}
+
+/* When the element comes into view, we will add the 'show' class */
+.animate.show {
+opacity: 1;
+transform: translateY(0); /* Elements will return to their original position */
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.logo img {
+    width: 70px;
+    border-radius: 20%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0 auto;
+    animation: fadeIn 2s;
+}
+
+header a {
+    justify-content: flex-end;
+}
+
+
+
+/* Buttons */
+.header-buttons {
+display: flex;
+gap: 10px;
+}
+
+.header-buttons .btn {
+padding: 6px 12px;
+font-size: 14px;
+background-color: #444;
+color: white;
+text-decoration: none;
+border-radius: 4px;
+transition: 0.3s ease;
+}
+
+.header-buttons .btn:hover {
+background-color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+
+.header-buttons {
+gap: 5px;
+}
+
+.header-buttons .btn {
+font-size: 12px;
+padding: 5px 10px;
+}
+}
+
+
+@media (max-width: 480px) {
+.header-buttons {
+flex-direction: row;
+justify-content: center;
+gap: 5px;
+}
+}
+
+/* Back to Top Button Styling */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #40554e, #36624b);
+    /* Gold and brown gradient */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    /* Circular button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    /* Elevated shadow */
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0;
+    /* Initially hidden */
+    visibility: hidden;
+    /* Ensures it's not interactive when hidden */
+    transform: scale(0.9);
+    /* Slightly smaller initially */
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Show the button when visible */
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    /* Full size */
+}
+
+/* Hover Effect */
+#backToTop:hover {
+    background: linear-gradient(135deg, #4ca0a0, #4a6f62);
+    /* Reverse gradient */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    /* Intensify shadow */
+    transform: scale(1.1);
+    /* Slight zoom */
+}
+
+/* Active (on click) */
+#backToTop:active {
+    transform: scale(0.95);
+    /* Shrink on click */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Design */
+#backToTop::after {
+    content: "⮝";
+    /* Up arrow with a circular base */
+    font-family: Arial, sans-serif;
+    font-size: 26px;
+}
+ 
+.team-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 10%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-img:hover {
+    transform: scale(1.1);
+}

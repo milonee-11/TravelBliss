@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Payment</title>
+    <!-- <link rel="icon" href="C:\Users\sdgup\Downloads\e.jpg"> -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            background-image: url("paymentimage.png");
+        }
+        
+       
+        button {
+            padding: 10px 15px;
+            background-color: #34495e;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        button:hover {
+            background-color: #2c3e50;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            background-color: rgba(255, 255, 255, 0.5);/* Transparent black background */
+        }
+        .left, .right {
+            flex: 1;
+            padding: 0 20px;
+        }
+        form {
+            margin-bottom: 20px;
+            background-color: transparent; /* Transparent form background */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #131212; /* Text color for labels */
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        input[type="text"], select, input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #15414f;
+            color: #fff;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+       
+        input[type="submit"]:hover {
+            background-color: #007b9e;
+        }
+        .card-images {
+            margin-top: 10px;
+        }
+        a{
+            text-decoration: none;
+        }
+        @media only screen and (max-width: 770px) {
+            .container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+
+
+
+        
+.logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .logo img {
+            width: 70px;
+            border-radius: 20%;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0 auto;
+            animation: fadeIn 2s;
+        }
+
+        header a {
+            justify-content: flex-end;
+        }
+
+
+        
+/* Buttons */
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-buttons .btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.header-buttons .btn:hover {
+    background-color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+
+    .header-buttons {
+        gap: 5px;
+    }
+
+    .header-buttons .btn {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .header-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 5px;
+    }
+}
+
+
+
+
+footer {
+            /* background-color: #2d2d2d; */
+            text-align: center;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer .social-media a {
+            padding: 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+            /* Smooth color transition */
+            text-decoration: none;
+            /* Remove the underline */
+        }
+
+        footer .social-media a:hover {
+            color: #ffcc00;
+            /* Change color on hover */
+        }
+    </style>
+</head>
+<body style="background-color: #687f7f;">
+    <header class="sticky-top bg-dark" style="height: 80px;">
+        <a href="index.html" data-bs-toggle="modal" data-bs-target="#thankYouModal" class="navbar-brand">
+          <img src="logo.jpeg" style="width: 70px; border-radius: 20%;">
+        </a>
+        <h1 class="text-white text-center" style="font-family: 'Times New Roman', Times, serif;">
+            Booking  for <span id="hotel-name" class="blink" style="color: rgb(213, 192, 192);"></span>
+        </h1>
+        <div class="header-buttons mr-5">
+          <a href="index.html" class="btn btn-home">Home</a>
+          <a href="payment_page.html" class="btn btn-back">Back</a>
+      </div>
+      </header>
+    <div class="container">
+        <div class="left">
+            <form id="paymentForm" onsubmit="return validateForm()">
+                <b><label for="fullName">Full name</label></b>
+                <input type="text" id="fullName" placeholder="Enter Name" required>
+
+                <b><label for="email">Email</label></b>
+                <input type="text" id="email" placeholder="Enter Email" required>
+
+                <b><label for="address">Address</label></b>
+                <input type="text" id="address" placeholder="Enter Your Address" required>
+
+                <b><label for="city">City</label></b>
+                <input type="text" id="city" placeholder="Enter Your City" required>
+
+                <div id="zip">
+                    <b><label for="state">State</label></b>
+                    <select id="state" required>
+                        <option value="">Choose State</option>
+                        <option>Gujarat</option>
+                        <option>Rajasthan</option>
+                        <option>Tamil Nadu</option>
+                        <option>Punjab</option>
+                    </select>
+                    <b><label for="zipCode">ZipCode</label></b>
+                    <input type="number" id="zipCode" placeholder="ZipCode" required>
+                </div>
+            </form>
+        </div>
+        <div class="right">
+                <div class="card-images">
+                    <b><label>Accepted Cards</label></b>
+                   <a href="#"> <img src="gpay.png" alt="Mastercard" width="70">&nbsp;&nbsp;<img src="paypal.png" alt="Visa" width="70">
+                    &nbsp;&nbsp;<img src="mastercard.png" alt="Sodexo" width="70"></a>
+                </div>
+                <b><label for="creditCard">Credit Card Number</label></b>
+                <input type="text" id="creditCard" placeholder="Enter Credit Card Number">
+
+                <b><label for="expireMonth">Expire Month</label></b>
+                <input type="text" id="expireMonth" placeholder="Enter Month">
+
+                <div id="expireYearCVV">
+                    <b><label for="expireYear">Expire Year</label></b>
+                    <select id="expireYear">
+                        <option>Choose Year</option>
+                        <option>2024</option>
+                        <option>2025</option>
+                        <option>2026</option>
+                        <option>2027</option>
+                    </select>
+                   <b> <label for="cvv">CVV</label></b>
+                    <input type="number" id="cvv" placeholder="CVV">
+                </div>
+                
+                
+                <div class="confirmation" id="confirmation"><input type="submit" value="Pay Now"></div>
+                
+            </form>
+        </div>
+    </div>
+    
+    
+
+    <!-- Footer Section -->
+  <footer class="text-center text-dark py-4 ">
+    <!-- <div class="container"> -->
+        <p>© 2025 Your Travel Platform | All Rights Reserved</p>
+        <div class="social-media">
+            <!-- Updated href links to point to real social media pages -->
+            <a href="https://www.facebook.com" target="_blank" class="text-dark me-3">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="text-dark me-3">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="text-dark me-3">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" class="text-dark me-3">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.snapchat.com" target="_blank" class="text-dark">
+                <i class="fab fa-snapchat-ghost"></i> <!-- Add Snapchat icon -->
+            </a>
+        </div>
+    <!-- </div> -->
+</footer>
+
+<script>
+    function validateForm() {
+        let fullName = document.getElementById("fullName").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let address = document.getElementById("address").value.trim();
+        let city = document.getElementById("city").value.trim();
+        let state = document.getElementById("state").value;
+        let zipCode = document.getElementById("zipCode").value.trim();
+        let creditCard = document.getElementById("creditCard").value.trim();
+        let expireMonth = document.getElementById("expireMonth").value.trim();
+        let expireYear = document.getElementById("expireYear").value;
+        let cvv = document.getElementById("cvv").value.trim();
+
+        let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        let cardPattern = /^[0-9]{16}$/;
+        let cvvPattern = /^[0-9]{3}$/;
+        let zipPattern = /^[0-9]{6}$/;
+        let monthPattern = /^(0?[1-9]|1[0-2])$/;
+
+        if (fullName === "" || email === "" || address === "" || city === "" || state === "" ||
+            zipCode === "" || creditCard === "" || expireMonth === "" || expireYear === "" || cvv === "") {
+            alert("All fields must be filled out!");
+            return false;
+        }
+
+        if (!emailPattern.test(email)) {
+            alert("Invalid email format!");
+            return false;
+        }
+
+        if (!zipPattern.test(zipCode)) {
+            alert("Zip code must be exactly 6 digits!");
+            return false;
+        }
+
+        if (!cardPattern.test(creditCard)) {
+            alert("Credit Card Number must be exactly 16 digits!");
+            return false;
+        }
+
+        if (!cvvPattern.test(cvv)) {
+            alert("CVV must be exactly 3 digits!");
+            return false;
+        }
+
+        if (!monthPattern.test(expireMonth)) {
+            alert("Expiration month must be between 1 and 12!");
+            return false;
+        }
+
+        if (expireYear === "Choose Year") {
+            alert("Please select an expiration year!");
+            return false;
+        }
+
+        document.body.innerHTML += `
+    <div id="successPopup">
+        ✅ Payment Successful! Enjoy your Stay! 🎉
+    </div>
+`;
+
+document.getElementById('successPopup').style.cssText = `
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 128, 0, 0.9);
+    color: white;
+    padding: 20px;
+    border-radius: 4px;
+    font-size: 20px;
+    text-align: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px; /* Increased height */
+    min-width: 250px; /* Slightly wider */
+`;
+
+
+// Remove popup after 3 seconds
+setTimeout(() => {
+    document.getElementById('successPopup').remove();
+    window.location.href = "index.html"; // Redirect after closing popup
+}, 3000);
+
+
+    }
+
+    document.querySelector(".confirmation input[type='submit']").addEventListener("click", function(event) {
+        if (!validateForm()) {
+            event.preventDefault(); // Prevents form submission if validation fails
+        }
+    });
+</script>
+
+    <script>
+        document.getElementById('hotel-name').textContent = sessionStorage.getItem('hotelName');
+
+        function completePayment() {
+            const userDetails = JSON.parse(sessionStorage.getItem('userDetails'));
+            document.getElementById('confirmation').textContent = 
+                `Thank you, ${userDetails.name}! Your payment for ${sessionStorage.getItem('hotelName')} has been received.`;
+            sessionStorage.clear();
+            alert('Payment successful! Enjoy your movie!');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,431 @@
+
+        
+
+        
+
+        footer {
+            background-color: #2d2d2d;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer .social-media a {
+            font-size: 1.5rem;
+            transition: color 0.3s;
+            /* Smooth color transition */
+            text-decoration: none;
+            /* Remove the underline */
+        }
+
+        footer .social-media a:hover {
+            color: #e7bc13;
+            /* Change color on hover */
+        }
+
+       
+        /* Add styles for animations */
+        .animate {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1s ease-out;
+        }
+
+        .animate.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+       
+
+
+
+        /* Style for category images */
+.category-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    /* border-radius: 10px; */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Overlay effect */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    border-radius: 2px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Text inside overlay */
+.overlay-text {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover Effects */
+.category:hover .overlay {
+    opacity: 1;
+}
+
+.category:hover .category-img {
+    transform: scale(1.05);
+}
+
+
+/* General Styling */
+.blog-post {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-bottom: 2px solid #ddd;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect - Lift Post Slightly */
+.blog-post:hover {
+    transform: scale(1.03);
+}
+
+/* Image Styling */
+.blog-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect - Zoom Image */
+.blog-img-container:hover .blog-img {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Text Styling */
+.blog-content {
+    padding: 20px;
+    /* background: #f9f9f9; */
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s ease-in-out;
+}
+
+/* Animation Effect - Reveal Text on Hover */
+.blog-post:hover .blog-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Heading Styling */
+.blog-content h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect - Change Heading Color */
+.blog-content h2:hover {
+    color: #edcb9c;
+}
+
+/* Paragraph Styling */
+.blog-content p {
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 1.6;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Animation - Appear on Scroll */
+.blog-post {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
+}
+
+.blog-post.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* Destination Section */
+.featured-destination {
+    max-width: 100%;
+    margin-top: 0;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Destination Card */
+.destination-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Background Image */
+.destination-image {
+    width: 100%;
+    height: 400px; /* Increased for better visibility */
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Overlay Effect */
+.destination-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    border-radius: 12px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Main Content */
+.destination-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    text-align: left;
+    max-width: 80%;
+}
+
+/* Hover Info - Initially Hidden */
+.hover-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Show More Info on Hover */
+.destination-card:hover .hover-info {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Hover Effects */
+.destination-card:hover .destination-image {
+    transform: scale(1.05);
+}
+
+.destination-card:hover::before {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {  /* Tablets */
+    .destination-image {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {  /* Mobile devices */
+    .destination-image {
+        height: auto; /* Maintain aspect ratio */
+        max-height: 280px;
+    }
+
+    .destination-content {
+        font-size: 1rem;
+        bottom: 10%;
+        left: 5%;
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .hover-info {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) { /* Small phones */
+    .destination-content {
+        font-size: 0.9rem;
+        bottom: 5%;
+        left: 3%;
+        text-align: center;
+        max-width: 95%;
+    }
+
+    .hover-info {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+
+    .destination-image {
+        height: 220px; /* Adjust height for smaller screens */
+    }
+}
+
+
+
+.logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .logo img {
+            width: 70px;
+            border-radius: 20%;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            /* padding: 2px; */
+        }
+
+        header h1 {
+            margin: 0 auto;
+            animation: fadeIn 2s;
+        }
+
+        header a {
+            justify-content: flex-end;
+        }
+
+
+        
+/* Buttons */
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-buttons .btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.header-buttons .btn:hover {
+    background-color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+
+    .header-buttons {
+        gap: 5px;
+    }
+
+    .header-buttons .btn {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .header-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 5px;
+    }
+}
+
+
+ /* Back to Top Button Styling */
+ #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #40554e, #36624b);
+            /* Gold and brown gradient */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            /* Circular button */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+            /* Elevated shadow */
+            cursor: pointer;
+            z-index: 1000;
+            font-size: 24px;
+            font-weight: bold;
+            opacity: 0;
+            /* Initially hidden */
+            visibility: hidden;
+            /* Ensures it's not interactive when hidden */
+            transform: scale(0.9);
+            /* Slightly smaller initially */
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        /* Show the button when visible */
+        #backToTop.show {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+            /* Full size */
+        }
+
+        /* Hover Effect */
+        #backToTop:hover {
+            background: linear-gradient(135deg, #4ca0a0, #4a6f62);
+            /* Reverse gradient */
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+            /* Intensify shadow */
+            transform: scale(1.1);
+            /* Slight zoom */
+        }
+
+        /* Active (on click) */
+        #backToTop:active {
+            transform: scale(0.95);
+            /* Shrink on click */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon Design */
+        #backToTop::after {
+            content: "⮝";
+            /* Up arrow with a circular base */
+            font-family: Arial, sans-serif;
+            font-size: 26px;
+        }
+        

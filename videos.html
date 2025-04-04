@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos | Travel Bliss</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            /* background-image: url(n1.jpg); */
+        }
+
+        .video-section {
+            margin-top: 20px;
+        }
+
+        .video-card {
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+            /* Hide videos initially */
+            align-items: center;
+        }
+
+        #video-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .video-card iframe {
+            width: 50%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .video-card iframe:hover {
+            transform: scale(1.05);
+        }
+
+        .video-description {
+            width: 50%;
+            padding-left: 40px;
+        }
+
+        .video-description h5 {
+            color: black;
+        }
+
+        .video-description p {
+            color: black;
+        }
+
+        .sticky-top {
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .logo img {
+            width: 70px;
+            border-radius: 20%;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0 auto;
+            animation: fadeIn 2s;
+        }
+
+        header a {
+            justify-content: flex-end;
+        }
+
+        .btn-back {
+            background-color: #2f653b;
+            color: #fff;
+        }
+
+        .btn-back:hover {
+            background-color: #86c194;
+        }
+
+        .alert {
+            display: none;
+        }
+
+        /* Hide alerts initially */
+
+        footer {
+            /* background-color: #2d2d2d; */
+            text-align: center;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer .social-media a {
+            padding: 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+            /* Smooth color transition */
+            text-decoration: none;
+            /* Remove the underline */
+        }
+
+        footer .social-media a:hover {
+            color: #ffcc00;
+            /* Change color on hover */
+        }
+              
+/* Buttons */
+.header-buttons {
+display: flex;
+gap: 10px;
+}
+
+.header-buttons .btn {
+padding: 6px 12px;
+font-size: 14px;
+background-color: #444;
+color: white;
+text-decoration: none;
+border-radius: 4px;
+transition: 0.3s ease;
+}
+
+.header-buttons .btn:hover {
+background-color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+
+.header-buttons {
+gap: 5px;
+}
+
+.header-buttons .btn {
+font-size: 12px;
+padding: 5px 10px;
+}
+}
+
+
+@media (max-width: 480px) {
+.header-buttons {
+flex-direction: row;
+justify-content: center;
+gap: 5px;
+}
+}
+    </style>
+</head>
+
+<body style="background-image: url(n1.jpg);background-size: cover;
+background-position: center;
+background-attachment: fixed; /* Makes it stick */
+position: relative;">
+    <header class="hero d-flex align-items-center justify-content-center text-white fixed-top bg-dark">
+        <div class="logo " style="margin-left: 8px;">
+            <img src="logo.jpeg" alt="Travel Bliss Logo">
+        </div>
+        <h1 style="font-family: 'Times New Roman', Times, serif; text-align: center; color: #e4c3a9; margin-left: 450px;">
+            <span id="welcome-text" class="blink">Videos</span> 
+            <!-- <span id="user-name" style="color: #feb47b;" class="blink"></span>! -->
+        </h1>
+ 
+        <div class="header-buttons">
+            <a href="index.html" class="btn btn-home">Home</a>
+            <a href="about.html" class="btn btn-back">About Us</a>
+            <a href="blog.html" class="btn btn-back">Blog</a>
+            <a href="new-page.html" class="btn btn-back">Back</a>
+        </div>
+    </header>
+    <br><br><br><br>
+
+    <div class="container">
+        <!-- Search Section -->
+        <div class="search-container text-center">
+            <form method="GET">
+                <select class="form-select  text-white" style="background-color: #0b0a0a;" name="search">
+                    <option value="">Select a place</option>
+                    <option value="manali">Manali</option>
+                    <option value="udaipur">Udaipur</option>
+                    <option value="goa">Goa</option>
+                </select>
+                <button type="submit" class="btn btn-secondary mt-2">Search</button>
+            </form>
+        </div>
+
+        <!-- Bootstrap Alerts for Search Results -->
+        <div class="alert alert-secondary text-center mt-3" id="alertManali">Showing videos for <strong>Manali</strong></div>
+        <div class="alert alert-secondary text-center mt-3" id="alertUdaipur">Showing videos for <strong>Udaipur</strong>
+        </div>
+        <div class="alert alert-secondary text-center mt-3" id="alertGoa">Showing videos for <strong>Goa</strong></div>
+
+        <!-- Video Section -->
+        <div id="video-list-random" class="row video-section">
+            <!-- Random Videos (Initially Visible) -->
+            <div class="col-md-12 video-card manali">
+                <iframe width="914" height="300"
+                    src="https://www.youtube.com/embed/5VvjxmbWeKk?playlist=5VvjxmbWeKk&loop=1&autoplay=1&mute=1"
+                    frameborder="0" allowfullscreen></iframe>
+                <div class="video-description">
+                    <h5>Exploring Manali</h5>
+                    <p>306k views</p>
+                </div>
+            </div>
+
+            <div class="col-md-12 video-card manali">
+                <iframe width="914" height="300"
+                    src="https://www.youtube.com/embed/Qipxi1Qn8iE?playlist=Qipxi1Qn8iE&loop=1&autoplay=1&mute=1"
+                    frameborder="0" allowfullscreen></iframe>
+                <div class="video-description">
+                    <h5>Manali's Beauty</h5>
+                    <p>7.4M views</p>
+                </div>
+            </div>
+
+            <div class="col-md-12 video-card udaipur">
+                <iframe width="914" height="300"
+                    src="https://www.youtube.com/embed/HsrAvK8mCFA?playlist=HsrAvK8mCFA&loop=1&autoplay=1&mute=1"
+                    frameborder="0" allowfullscreen></iframe>
+                <div class="video-description">
+                    <h5>Udaipur Lakes and Palaces</h5>
+                    <p>98k views</p>
+                </div>
+            </div>
+
+            <div class="col-md-12 video-card goa">
+                <iframe width="914" height="300"
+                    src="https://www.youtube.com/embed/F3YGYr37QFI?playlist=F3YGYr37QFI&loop=1&autoplay=1&mute=1"
+                    frameborder="0" allowfullscreen></iframe>
+                <div class="video-description">
+                    <h5>Goa's Best Places</h5>
+                    <p>689k views</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-3">
+            <a href="videos.html" class="btn btn-secondary">Back to Search</a>
+        </div>
+    </div>
+    <br>
+   <!-- Footer Section -->
+   <footer class="text-center text-white  py-4">
+    <div class="container">
+        <p style="background-color: #080808; display: inline-block; width: 50%; border-radius: 3px;">© 2025 Your Travel Platform | All Rights Reserved</p>
+        <div class="social-media">
+            <!-- Updated href links to point to real social media pages -->
+            <a href="https://www.facebook.com" target="_blank" class="text-dark me-3">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="text-dark me-3">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="text-dark me-3">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" class="text-dark me-3">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.snapchat.com" target="_blank" class="text-dark">
+                <i class="fab fa-snapchat-ghost"></i> <!-- Add Snapchat icon -->
+            </a>
+        </div>
+    </div>
+</footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get search parameter from URL or sessionStorage
+        const urlParams = new URLSearchParams(window.location.search);
+        let searchQuery = urlParams.get('search');
+
+        if (!searchQuery) {
+            searchQuery = sessionStorage.getItem('selectedPlace'); // Fallback to sessionStorage
+        }
+
+        // Set search dropdown selection
+        if (searchQuery) {
+            const searchSelect = document.getElementById('searchPlace');
+            if (searchSelect) {
+                searchSelect.value = searchQuery.toLowerCase(); // Set dropdown to selected place
+            }
+
+            // Hide all videos initially
+            document.querySelectorAll('.video-card').forEach(video => video.style.display = 'none');
+
+            // Show only videos of the selected location
+            const selectedVideos = document.querySelectorAll('.' + searchQuery.toLowerCase());
+            selectedVideos.forEach(video => video.style.display = 'flex');
+
+            // Show the corresponding alert if applicable
+            const alertElement = document.getElementById('alert' + searchQuery.charAt(0).toUpperCase() + searchQuery.slice(1));
+            if (alertElement) {
+                alertElement.style.display = 'block';
+            }
+        } else {
+            // Show all videos if no search query
+            document.querySelectorAll('.video-card').forEach(video => video.style.display = 'flex');
+        }
+    });
+</script>
+
+
+</body>
+
+</html>

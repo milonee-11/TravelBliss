@@ -1,0 +1,457 @@
+ footer {
+            /* background-color: #2d2d2d; */
+            text-align: center;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer .social-media a {
+            padding: 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+            /* Smooth color transition */
+            text-decoration: none;
+            /* Remove the underline */
+        }
+
+        footer .social-media a:hover {
+            color: #ffcc00;
+            /* Change color on hover */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /* background: linear-gradient(to bottom, #cd7241, #1e424b); */
+            /* background-image: url(dest.jpg); */
+            transition: background-image 0.5s ease-in-out;
+        }
+
+        /* .modal {
+            z-index: 1050;
+        } */
+
+        header {
+            /* background: linear-gradient(to bottom, #cd7241, #1e424b); */
+             background-color: linear-gradient(to bottom, #314e4a, #377177);
+            color: rgba(255, 255, 255, 0.42);
+            padding: 20px;
+            text-align: center;
+            background-image: url('header-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 20px;
+            border: #1e1b19;
+        }
+
+        .left-section {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background: rgba(79, 84, 83, 0.9);
+            border-radius: 2px;
+        }
+
+        .left-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .left-section .destination-card {
+            position: relative;
+            width: 350px;
+            /* Fixed width for laptops */
+            max-width: 100%;
+            /* Ensures it scales down on smaller screens */
+            overflow: hidden;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color:#6c817d ;
+            border: #1e1b19;
+            /* background: linear-gradient(to bottom, #c0990e, #583227); */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+
+        .left-section .destination-card img {
+            border: #1e1b19;
+            width: 100%;
+            height: auto;
+            /* Adjusts height proportionally */
+            max-height: 180px;
+            /* Restrict max height for consistency */
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .left-section .destination-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .left-section .destination-card:hover img {
+            transform: scale(1.2);
+        }
+
+        /* 📌 Responsive Adjustments */
+        @media (max-width: 1024px) {
+            .left-section .destination-card {
+                width: 300px;
+                /* Slightly smaller for tablets */
+            }
+
+            .left-section .destination-card img {
+                max-height: 160px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .left-section {
+                flex-direction: row;
+                /* Adjusts layout for smaller screens */
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .left-section .destination-card {
+                width: 260px;
+                /* Smaller size for mobile */
+            }
+
+            .left-section .destination-card img {
+                max-height: 140px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .left-section .destination-card {
+                width: 100%;
+                /* Full width for very small screens */
+                max-width: 90%;
+                /* Slight margin from edges */
+            }
+
+            .left-section .destination-card img {
+                max-height: 120px;
+            }
+        }
+
+
+
+
+        .right-section {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            
+            background: rgba(79, 84, 83, 0.9);
+            border-radius: 2px;
+        }
+
+        .right-section .step {
+            display: none;
+            border: 2px solid #1e1b19;
+            padding: 15px;
+            border-radius: 4px;
+            text-align: center;
+            background-color: linear-gradient(to bottom, #314e4a, #377177);
+        }
+
+        .right-section .step.active {
+            display: block;
+            background-color: linear-gradient(to bottom, #314e4a, #377177);
+        }
+
+        .right-section button {
+            color: white;
+            padding: 10px 20px;
+           background-color: #404a49;
+            border: solid black;
+            border-radius: 3.5px;
+            cursor: pointer;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .right-section button:hover {
+            background: linear-gradient(to bottom, #2e3c3f, #89766c);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .logo img {
+            width: 70px;
+            border-radius: 20%;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            height: 80px;
+        }
+
+        header h1 {
+            margin: 0 auto;
+            animation: fadeIn 2s;
+        }
+
+        header a {
+            justify-content: flex-end;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+
+
+        .btn-home {
+            background-color: #283f45;
+            color: #fff;
+        }
+
+        .btn-back {
+            background-color: #2f653b;
+            color: #fff;
+        }
+
+        .btn-home:hover {
+            background-color: #86a9c1;
+        }
+
+        .btn-back:hover {
+            background-color: #86c194;
+        }
+
+
+        /* Basic styles for the carousel */
+        .carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            transition: background-image 1s ease-in-out;
+            /* Smooth transition for background change */
+            background-size: cover;
+            /* Make the background image cover the container */
+            background-position: center;
+        }
+
+        .carousel-wrapper {
+            display: flex;
+            animation: scrollLeft 200s linear infinite;
+        }
+
+        .carousel-item {
+            width: 20vw;
+            height: 25vw;
+            margin: 0 1vw;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            opacity: 0.8;
+            transition: transform 1s ease, opacity 0.3s ease, box-shadow 0.3s ease, width 0.3s ease;
+            cursor: pointer;
+            /* Make the items clickable */
+        }
+
+        .carousel-item:hover {
+            transform: scale(1.1);
+            width: 25vw;
+            opacity: 1;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Animation for scrolling */
+        @keyframes scrollLeft {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+
+
+
+
+
+        /* Modal Styles */
+        .modal {
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* This moves the modal back by 50% of its own size */
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 3000;
+            /* background-color: rgba(0, 0, 0, 0.5); */
+        }
+
+
+        .modal-content {
+            width: 80%;
+            max-width: 500px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .modal-footer .btn {
+            margin: 5px;
+        }
+
+        /* Simple button styles */
+        .btn {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+              
+/* Buttons */
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-buttons .btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.header-buttons .btn:hover {
+    background-color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+
+    .header-buttons {
+        gap: 5px;
+    }
+
+    .header-buttons .btn {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .header-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 5px;
+    }
+}
+ /* Back to Top Button Styling */
+ #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #40554e, #36624b);
+            /* Gold and brown gradient */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            /* Circular button */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+            /* Elevated shadow */
+            cursor: pointer;
+            z-index: 1000;
+            font-size: 24px;
+            font-weight: bold;
+            opacity: 0;
+            /* Initially hidden */
+            visibility: hidden;
+            /* Ensures it's not interactive when hidden */
+            transform: scale(0.9);
+            /* Slightly smaller initially */
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        /* Show the button when visible */
+        #backToTop.show {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+            /* Full size */
+        }
+
+        /* Hover Effect */
+        #backToTop:hover {
+            background: linear-gradient(135deg, #4ca0a0, #4a6f62);
+            /* Reverse gradient */
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+            /* Intensify shadow */
+            transform: scale(1.1);
+            /* Slight zoom */
+        }
+
+        /* Active (on click) */
+        #backToTop:active {
+            transform: scale(0.95);
+            /* Shrink on click */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon Design */
+        #backToTop::after {
+            content: "⮝";
+            /* Up arrow with a circular base */
+            font-family: Arial, sans-serif;
+            font-size: 26px;
+        }
+       
