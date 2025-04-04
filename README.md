@@ -17,3 +17,4 @@ TravelBliss was designed with a passion for making travel planning effortless an
 ~Further we can also implement the database connectivity for login and booking details also we can add backend for needed functionalities, It right now shows the basic usage of frontend designing 
 
 Code must be run via: index.html
+Visit the link for a demo video: https://www.linkedin.com/feed/update/urn:li:activity:7307481884265963520/
